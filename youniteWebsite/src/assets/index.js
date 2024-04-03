@@ -1,0 +1,1 @@
+// All the assets ( images {png , jpg , svg , jpeg} , videos , audios etc) will be imported to this file and will be exported to other components from this file only.

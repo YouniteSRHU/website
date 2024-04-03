@@ -1,0 +1,1 @@
+// all of the component's jsx file of our website will be inside this folder. We will import the assets from index.js file present in the assets folder.
