@@ -1,13 +1,21 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
+import Layout from "./components/Layout/Layout";
+import Website from "./Pages/Website";
+import { Suspense } from "react";
 
 function App() {
 
   return (
-    <>
-        <h1 className=" bg-red-400 text-3xl font-bold align-middle justify-center"> YOUNITE WEBSITE : Deadline is 12 April 2024</h1>
-
-    </>
+    <BrowserRouter>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route element={<Layout />}>
+                <Route path="/" element={<Website />} />
+              </Route>
+            </Routes>
+          </Suspense>
+        </BrowserRouter> 
   )
 }
 
