@@ -11,51 +11,39 @@ import "./EventSlider.css";
 import EventsCard from "../EventsCard/EventsCard";
 import { FaChevronCircleLeft , FaChevronCircleRight} from "react-icons/fa"
 
+// Import prisma
+import prisma from "/DB/db.config.js";
+
 const EventSlider = ({eventType}) => {
-    const sliderSettings = {
-        grabCursor: true,
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-        breakpoints: {
-            480: {
-                slidesPerView: 1,
-            },
-            600: {
-                slidesPerView: 2,
-            },
-            850: {
-                slidesPerView: 3,
-            },
-            1100: {
-                slidesPerView: 4,
-            },
-        },
-    };
 
 
     const data = [
         {
+            eventURL: "https://google.com/",
             urlImage: "https://www.yudiz.com/codepen/expandable-animated-card-slider/dota-2.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
         {
+            eventURL: "https://google.com/",
             urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
         {
+            eventURL: "https://google.com/",
             urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
         {
+            eventURL: "https://google.com/",
             urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
         {
+            eventURL: "https://google.com/",
             urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
