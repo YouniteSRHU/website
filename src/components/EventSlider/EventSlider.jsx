@@ -1,76 +1,110 @@
-import React from 'react'
-import { useState } from "react";
-import { motion } from "framer-motion";
-import EventsCard from '../EventsCard/EventsCard';
-import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
+import React from "react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { EffectCoverflow,Pagination, Navigation, Scrollbar, A11y } from 'swiper/modules';
+// Import Swiper styles
+import "swiper/css";
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import "./EventSlider.css";
+import EventsCard from "../EventsCard/EventsCard";
+import { FaChevronCircleLeft , FaChevronCircleRight} from "react-icons/fa"
 
-const EventSlider = () => {
-    const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4]);
-
-    const handleNext = () => {
-        setPositionIndexes((prevIndexes) => {
-            const updatedIndexes = prevIndexes.map(
-                (prevIndex) => (prevIndex + 1) % 5
-            );
-            return updatedIndexes;
-        });
+const EventSlider = ({eventType}) => {
+    const sliderSettings = {
+        grabCursor: true,
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        breakpoints: {
+            480: {
+                slidesPerView: 1,
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            850: {
+                slidesPerView: 3,
+            },
+            1100: {
+                slidesPerView: 4,
+            },
+        },
     };
 
-    const handleBack = () => {
-        setPositionIndexes((prevIndexes) => {
-            const updatedIndexes = prevIndexes.map(
-                (prevIndex) => (prevIndex + 4) % 5
-            );
 
-            return updatedIndexes;
-        });
-    };
-
-    const cards = [<EventsCard />, <EventsCard />, <EventsCard />, <EventsCard />, <EventsCard />];
-
-    const positions = ["center", "left1", "left", "right", "right1"];
-
-    const imageVariants = {
-        center: { x: "0%", scale: 1, zIndex: 5 },
-        left1: { x: "-50%", scale: 0.7, zIndex: 3 },
-        left: { x: "-90%", scale: 0.5, zIndex: 2 },
-        right: { x: "90%", scale: 0.5, zIndex: 1 },
-        right1: { x: "50%", scale: 0.7, zIndex: 3 },
-    };
+    const data = [
+        {
+            urlImage: "https://www.yudiz.com/codepen/expandable-animated-card-slider/dota-2.jpg",
+            title: "Noteworthy technology acquisitions 2021",
+            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+        },
+        {
+            urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
+            title: "Noteworthy technology acquisitions 2021",
+            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+        },
+        {
+            urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
+            title: "Noteworthy technology acquisitions 2021",
+            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+        },
+        {
+            urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
+            title: "Noteworthy technology acquisitions 2021",
+            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+        },
+        {
+            urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
+            title: "Noteworthy technology acquisitions 2021",
+            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+        },
+    ]
     return (
-        <>
-        <div className='  text-[#013D7F] flex justify-start text-4xl font-bold p-4  ml-20 ' >
-        <span>Flagship Events</span>
-        </div>
-        <div className="flex items-center flex-col justify-center  bg-black h-screen">
-        
-            {cards.map((card, index) => (
-                <motion.div
-                    key={index}
-                    initial="center"
-                    animate={positions[positionIndexes[index]]}
-                    variants={imageVariants}
-                    transition={{ duration: 0.5 }}
-                    style={{ width: "40%", position: "absolute", display: "flex",justifyContent: "center" }}
-                ><EventsCard/></motion.div>
-            ))}
-            <div className="flex flex-row gap-10 mt-20">
-                <button
-                    className="text-white mt-[400px] text-5xl py-2 px-4"
-                    onClick={handleBack}
+        <div >
+            <div div className="container">
+            <h2 class="line-title">{eventType}</h2>
+                <Swiper effect={'coverflow'}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    loop={true}
+                    slidesPerView={'auto'}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 2.5,
+                    }}
+                    pagination={{ el: '.swiper-pagination', clickable: true }}
+                    navigation={{
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                        clickable: true,
+                    }}
+                    modules={[EffectCoverflow, Pagination, Navigation]}
+                    className="swiper_container"
                 >
-                    <FaChevronCircleLeft />
-                </button>
-                <a
-                    className="text-white mt-[400px] py-2 px-4  text-5xl"
-                    onClick={handleNext}
-                >
-                    <FaChevronCircleRight />
-                </a>
+                    {/* slider */}
+                    {data.map((card, i) => (
+                        <SwiperSlide key={i}>
+                            <EventsCard card={card} className="card"/>
+                        </SwiperSlide>
+                    ))}
+                    <div className="slider-controler">
+                        <div className="swiper-button-prev slider-arrow">
+                            <button name="arrow-back-outline"><FaChevronCircleLeft/></button>
+                        </div>
+                        <div className="swiper-button-next slider-arrow">
+                            <button name="arrow-forward-outline"> <FaChevronCircleRight/></button>
+                        </div>
+                        <div className="swiper-pagination"></div>
+                    </div>
+                </Swiper>
             </div>
-        </div>
-        </>
-    )
-}
 
-export default EventSlider
+        </div>
+    );
+};
+
+export default EventSlider;
