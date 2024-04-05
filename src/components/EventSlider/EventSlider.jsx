@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "./EventSlider.css";
 import EventsCard from "../EventsCard/EventsCard";
+import { FaChevronCircleLeft , FaChevronCircleRight} from "react-icons/fa"
 
 const EventSlider = ({eventType}) => {
     const sliderSettings = {
@@ -92,10 +93,10 @@ const EventSlider = ({eventType}) => {
                     ))}
                     <div className="slider-controler">
                         <div className="swiper-button-prev slider-arrow">
-                            <button name="arrow-back-outline">prev</button>
+                            <button name="arrow-back-outline"><FaChevronCircleLeft/></button>
                         </div>
                         <div className="swiper-button-next slider-arrow">
-                            <button name="arrow-forward-outline"> next</button>
+                            <button name="arrow-forward-outline"> <FaChevronCircleRight/></button>
                         </div>
                         <div className="swiper-pagination"></div>
                     </div>
