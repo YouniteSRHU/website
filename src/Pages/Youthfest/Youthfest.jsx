@@ -3,9 +3,10 @@ import EventSlider from '../../components/EventSlider/EventSlider'
 
 const Youthfest = () => {
   return (
-    <>
-        <EventSlider/>
-    </>
+    <div className='youth-container'>
+        <EventSlider eventType={"Flagship Events"}/>
+        <EventSlider eventType={"non Flagship Events"}/>
+    </div>
   )
 }
 
