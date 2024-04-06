@@ -1,0 +1,29 @@
+.footer {
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.social-media a {
+  color: white;
+  margin-left: 20px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .social-media a {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
