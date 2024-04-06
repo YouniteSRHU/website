@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { EffectCoverflow,Pagination, Navigation, Scrollbar, A11y } from 'swiper/modules';
+import { EffectCoverflow,Pagination, Navigation } from 'swiper/modules';
 // Import Swiper styles
 import "swiper/css";
 import 'swiper/css/effect-coverflow';
@@ -12,7 +12,7 @@ import EventsCard from "../EventsCard/EventsCard";
 import { FaChevronCircleLeft , FaChevronCircleRight} from "react-icons/fa"
 
 // Import prisma
-import prisma from "/DB/db.config.js";
+// import prisma from "/DB/db.config.js";
 
 const EventSlider = ({eventType}) => {
 
