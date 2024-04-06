@@ -13,6 +13,7 @@
   max-width: 124rem;
   padding: 4rem -27rem;
   margin: 0 auto;
+  padding-top: 1rem;
   background:var(--bg);
 }
 
