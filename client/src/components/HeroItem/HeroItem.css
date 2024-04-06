@@ -45,7 +45,7 @@
   top: 50%;
   left: 3rem;
   transform: translateY(-50%);
-  font: 400 0.85rem helvetica, sans-serif;
+  font: 400 2rem helvetica, sans-serif;
   color: white;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -64,6 +64,7 @@
   }
 
   & .hero-button {
+    font-size: 1rem;
     width: fit-content;
     background-color: rgba(0, 0, 0, 0.1);
     color: white;

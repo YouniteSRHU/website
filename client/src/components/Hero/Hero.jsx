@@ -55,7 +55,7 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    const intervalId = setInterval(rotateItems, 5000); // Rotate every 3 seconds
+    const intervalId = setInterval(rotateItems, 10000); // Rotate every 3 seconds
 
     return () => {
       clearInterval(intervalId); // Clean up the interval
