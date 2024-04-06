@@ -19,31 +19,26 @@ const EventSlider = ({eventType}) => {
 
     const data = [
         {
-            eventURL: "https://google.com/",
             urlImage: "https://www.yudiz.com/codepen/expandable-animated-card-slider/dota-2.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
         {
-            eventURL: "https://google.com/",
             urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
         {
-            eventURL: "https://google.com/",
             urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
         {
-            eventURL: "https://google.com/",
             urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
         {
-            eventURL: "https://google.com/",
             urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
