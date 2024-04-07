@@ -1,0 +1,52 @@
+/* EventInfo.css */
+
+.event-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+  }
+  
+  .text-section {
+    max-width: 50%;
+    text-align: left;
+
+  }
+  .text-section>p{
+    color: #013D7F;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .guidelines, .terms{
+    margin-bottom: 15px;
+  }
+  .guidelines>h2, .terms>h2{
+    color: #013D7F;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+  .map-image {
+    max-width: 50%;
+    border-radius: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .event-info {
+      flex-direction: column;
+      align-items: start;
+      padding: 1rem;
+    }
+      
+      .guidelines>h2, .terms>h2{
+        color: #013D7F;
+        font-weight: 900;
+        font-size: 1.5rem;
+      }
+    .text-section,
+    .map-image {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

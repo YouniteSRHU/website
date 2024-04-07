@@ -27,7 +27,7 @@ const Navbar = () => {
         <li><Link to={"/youthfest"}>YOUTHFEST</Link></li>
         <li><Link to={"/events"}>EVENTS</Link></li>
         <li><Link to={"/about-us"}>ABOUT US</Link></li>
-        <li><Link to={"/contact-us"}>CONTACT US</Link></li>
+        <li><Link to={"/contact-us"}>CONTACT-US</Link></li>
       </ul>
     </nav>
   );

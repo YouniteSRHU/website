@@ -2,7 +2,7 @@
     width: 50%;
     max-height: 400px;
     overflow: hidden;
-    border-radius: 10%;
+    border-radius: 20px;
   }
   
   .image-carousel img {
