@@ -47,7 +47,7 @@ const EventSlider = ({eventType}) => {
     return (
         <div >
             <div div className="container">
-            <h2 class="line-title">{eventType}</h2>
+            <h2 className="line-title">{eventType}</h2>
                 <Swiper effect={'coverflow'}
                     grabCursor={true}
                     centeredSlides={true}
