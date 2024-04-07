@@ -37,6 +37,7 @@ export const youthFestPageController = async (req, res) => {
           event_id: true,
           event_name: true,
           event_desc: true,
+          fest_identifier: true,
           images: { 
             select: {
                 image_src: true,
