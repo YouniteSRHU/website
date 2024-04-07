@@ -21,7 +21,7 @@ const Navbar = () => {
         type="checkbox"
         id="menu-toggle"
         className="menu-toggle"
-        checked={showMenu}
+        defaultChecked={showMenu}
       />
       <ul className={`nav-links ${showMenu ? "show" : ""}`}>
         <li><Link to={"/youthfest"}>YOUTHFEST</Link></li>

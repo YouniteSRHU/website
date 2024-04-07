@@ -1,0 +1,29 @@
+.image-carousel {
+    width: 50%;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 10%;
+  }
+  
+  .image-carousel img {
+    width: 100rem;
+    height: 20rem;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .image-carousel {
+        width: 25rem;
+        height: 20rem; 
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .image-carousel {
+        width: 20rem;
+        height: 20rem;
+    }}
+  @media screen and (max-width: 350px) {
+    .image-carousel {
+        width: 17rem;
+        height: 20rem;
+    }}
