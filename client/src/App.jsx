@@ -5,6 +5,7 @@ import Website from "./Pages/Website";
 import { Suspense } from "react";
 import Youthfest from "./Pages/Youthfest/Youthfest";
 import SingleEvent from "./Pages/SingleEvent/SingleEvent";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                   <Route index element={<Youthfest />} />
                   <Route path=":1" element={<SingleEvent />} />
                 </Route>
+                <Route path="/contact-us" element={<Contact />} />
               </Route>
             </Routes>
           </Suspense>

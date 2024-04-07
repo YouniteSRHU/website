@@ -1,0 +1,23 @@
+
+.form-container{
+    padding: 1rem 4rem;
+}
+
+
+.black-gradient {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+}
+.bg-tertiary{
+    --tw-bg-opacity: 1;
+    background-color: rgb(21 16 48 / var(--tw-bg-opacity));
+}
+.form-bg{
+    background: rgb(226, 224, 224);
+
+}
+@media screen and (max-width:500px){
+    .form-container{
+        padding: 1rem;
+    }
+}
