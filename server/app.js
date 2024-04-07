@@ -7,8 +7,8 @@ import logger from 'morgan';
 import {config} from 'dotenv';
 import cors from 'cors';
 
-import indexRouter from './routes/events.js';
-import usersRouter from './routes/users.js';
+import eventsRouter from './routes/events.js';
+// import usersRouter from './routes/users.js';
 import prisma from './DB/db.config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -146,10 +146,11 @@ async function fetchEvents() {
     }
   }))
 }
-fetchEvents();
+// createEvent();
+// fetchEvents();
 
-app.use('/api/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api/', eventsRouter);
+// app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
