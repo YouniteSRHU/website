@@ -4,6 +4,7 @@ import Layout from "./components/Layout/Layout";
 import Website from "./Pages/Website";
 import { Suspense } from "react";
 import Youthfest from "./Pages/Youthfest/Youthfest";
+import SingleEvent from "./Pages/SingleEvent/SingleEvent";
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
                 <Route path="/" element={<Website />} />
                 <Route path="/youthfest">
                   <Route index element={<Youthfest />} />
-                  {/* <Route path=":eventId" element={<Property />} /> */}
+                  <Route path=":1" element={<SingleEvent />} />
                 </Route>
               </Route>
             </Routes>

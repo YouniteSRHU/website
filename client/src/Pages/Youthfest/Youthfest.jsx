@@ -15,7 +15,7 @@ const Youthfest = () => {
 
   return (
     <div className='youth-container'>
-      <EventHeader eh_imageURl={festHeaderData.eh_imageURl} eh_heading={festHeaderData.eh_heading} eh_desc={festHeaderData.eh_desc} />
+      <EventHeader eh_imageURl={festHeaderData.eh_imageURl} eh_heading={festHeaderData.eh_heading} eh_desc={festHeaderData.eh_desc} display_prop={"none"}/>
       <EventSlider eventType={"Flagship Events"} />
       <EventSlider eventType={"non Flagship Events"} />
     </div>

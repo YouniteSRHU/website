@@ -3,25 +3,43 @@
     background-color: #003366;
     color: white;
     padding: 1rem 4rem;
+    justify-content: space-between;
   }
-  
-  .EH-text-container {
+  .EH-right{
     display: flex;
-    width: 70rem;
-    margin-left: 20px;
-    padding: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 50rem;
+  }
+  .EH-text-container {
+    display: flex;
+    width: 35rem;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
   .EH-text-container>h2{
     font-size: xx-large;
     font-weight: 900;
   }
-  
+  #EH-button
+    {
+      width: 30%; 
+      height: 90%; 
+      background:#DE0F3F;
+      border-radius:10px;
+      font-size: xx-large;
+    }
   /* Responsive styles */
   @media screen and (max-width: 768px) {
     
+    .EH-right{
+      width: 30rem;
+      height: 20rem;
+    }
     .EH-container {
       flex-direction: column;
       justify-content: center;
@@ -29,18 +47,24 @@
     }
     .EH-text-container {
         width: 30rem;
-        padding: 2rem;
+        padding: 1rem;
       }
       .EH-text-container>h2{
         font-size: xx-large;
         font-weight: 900;
       }
+      #EH-button{
+      width: 100%; 
+      height: 100%; 
+    }
     .EH-image-container {
       width: 100%;
     }
   }
   @media screen and (max-width: 500px) {
-    
+    .EH-right{
+      width: 18rem;
+    }
     .EH-container {
       flex-direction: column;
       justify-content: center;
@@ -48,7 +72,7 @@
     }
     .EH-text-container {
         width: 20rem;
-        padding: 2rem;
+        padding: 1rem;
       }
       .EH-text-container>h2{
         font-size: xx-large;
