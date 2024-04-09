@@ -1,0 +1,36 @@
+.about-us-container {
+    background: url('/about.jpg') no-repeat center;
+    background-size: cover;
+    max-width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative; /* For positioning the dimensions */
+  }
+  .about-us-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 50%;
+    border-radius: 20px 20px 0px 0px;
+    background: rgba(255,255, 255, 0.6);
+  }
+  
+  .about-us-text>h2,
+  .about-us-text>p {
+    margin: 2px;
+  }
+  
+  .about-us-text>h2{
+    font-size: xx-large;
+    font-weight: 900;
+    color: #013D7F;
+  }
+
+  .about-us-text>p{
+    max-width: 80%;
+    color: #013D7F;
+  }
