@@ -13,6 +13,7 @@
     "@prisma/client": "^5.12.1",
     "@react-three/drei": "^9.57.3",
     "@react-three/fiber": "^8.12.0",
+    "axios": "^1.6.8",
     "framer-motion": "^11.0.24",
     "jquery": "^3.7.1",
     "lightgallery": "^2.7.2",
@@ -21,7 +22,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.22.3",
+    "react-spinners": "^0.13.8",
+    "react-toastify": "^10.0.5",
     "sass": "^1.68.0",
     "swiper": "^11.1.0"
   },

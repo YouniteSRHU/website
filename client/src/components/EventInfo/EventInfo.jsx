@@ -12,7 +12,7 @@ const EventInfo = ({ date, venue, guidelines, terms, mapImage }) => {
                     <h2>GUIDELINES</h2>
                     <ul>
                         {guidelines.map((rule, index) => (
-                            <li key={index}>{rule}</li>
+                            <li key={index}>{rule.guideline}</li>
                         ))}
                     </ul>
                 </div>
@@ -20,7 +20,7 @@ const EventInfo = ({ date, venue, guidelines, terms, mapImage }) => {
                     <h2>TERMS & CONDITIONS</h2>
                     <ul>
                         {terms.map((rule, index) => (
-                            <li key={index}>{rule}</li>
+                            <li key={index}>{rule.tc}</li>
                         ))}
                     </ul>
                 </div>
