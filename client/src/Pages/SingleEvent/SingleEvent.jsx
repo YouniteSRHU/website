@@ -7,7 +7,6 @@ import { useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
 import { getEvent } from '../../utils/api'
 import { PuffLoader } from "react-spinners";
-import { toast } from "react-toastify";
 const SingleEvent = () => {
     const { pathname } = useLocation();
     const id = pathname.split("/").slice(-1)[0];
