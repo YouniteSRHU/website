@@ -54,6 +54,7 @@ const Gallery = () => {
                     }
                 </ul>
             </div>
+            <span className="clickme">CLICK PHOTOS TO OPEN</span>
             <LightGallery
                 onInit={onInit}
                 speed={500}

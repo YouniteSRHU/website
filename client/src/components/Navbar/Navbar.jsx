@@ -12,7 +12,6 @@ const Navbar = () => {
       <Link to={"/"}> <img src={logo} alt="logo" width={75} className="logo"/></Link>
       <ul className={`nav-links ${showMenu ? "show" : ""}`}>
         <li><Link to={"/YOUTHFEST"}>YOUTHFEST</Link></li>
-        <li><Link to={"/EVENTS"}>EVENTS</Link></li>
         <li><Link to={"/ABOUT-US"}>ABOUT US</Link></li>
         <li><Link to={"/CONTACT-US"}>CONTACT-US</Link></li>
       </ul>

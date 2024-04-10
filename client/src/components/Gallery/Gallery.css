@@ -19,13 +19,23 @@
     padding: 5px 0px;
     border-radius: 20px;
     transition: transform 0.2s;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
 }
 
 .galleryImg:hover {
-    filter: opacity(.9);
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
     transform: scale(1.01);
 }
-
+.clickme{
+    color:rgb(195, 27, 27)
+}
 .filterItem ul {
     display: flex;
     align-items: center;
