@@ -3,7 +3,7 @@
   height: 300px;
   list-style-type: none;
   position: absolute;
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
   z-index: 1;
   background-position: center;
@@ -25,7 +25,7 @@
   }
 
   &:nth-child(3) {
-    left: 50%;
+    left: calc(50% + 220px);
   }
   &:nth-child(4) {
     left: calc(50% + 220px);

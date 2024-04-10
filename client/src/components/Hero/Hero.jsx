@@ -8,12 +8,12 @@ const Hero = () => {
     {
       title: "Lossless Youths",
       description: "Lorem ipsum, dolor sit amet...",
-      imageUrl: "https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg",
+      imageUrl: "https://i.redd.it/tc0aqpv92pn21.jpg",
     },
     {
-      title: "Estrange Bond",
-      description: "Lorem ipsum, dolor sit amet...",
-      imageUrl: "https://i.redd.it/tc0aqpv92pn21.jpg",
+      title: "",
+      description: "",
+      imageUrl: "/YouniteLogoAnimation.gif",
     },
     {
       title: "The Gate Keeper",

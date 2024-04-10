@@ -20,7 +20,7 @@ body {
   position: absolute;
   bottom: 2rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-140%) translateY(-200%);
   z-index: 5;
   user-select: none;
 
