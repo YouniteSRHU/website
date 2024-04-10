@@ -1,9 +1,10 @@
 .footer {
   background-color: #003366;
   color: white;
-  padding: 1rem 4rem;
+  padding: 2rem 4rem;
   display: flex;
   justify-content: space-between;
+  min-height: 10vh;
 }
 
 .footer-content p {
@@ -20,6 +21,7 @@
   .footer {
     flex-direction: column-reverse;
     align-items: center;
+    padding: 0.55rem 4rem;
   }
 
   .social-media a {

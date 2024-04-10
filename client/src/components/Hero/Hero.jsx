@@ -6,30 +6,35 @@ import "./Hero.css";
 const Hero = () => {
   const [sliderItems, setSliderItems] = useState([
     {
-      title: "Lossless Youths",
-      description: "Lorem ipsum, dolor sit amet...",
-      imageUrl: "https://i.redd.it/tc0aqpv92pn21.jpg",
+      title: "Younite",
+      description: "A dynamic student ecosystem in Swami Rama Himalayan University",
+      url: "/about-us",
+      id: "animated-gif",
     },
     {
-      title: "",
-      description: "",
-      imageUrl: "/YouniteLogoAnimation.gif",
+      title: "AdhUnique",
+      description: "AdhUnique'24: The SRHU YouthFest",
+      url: "/youthfest",
+      id: "one",
     },
     {
-      title: "The Gate Keeper",
-      description: "Lorem ipsum, dolor sit amet...",
-      imageUrl: "https://wharferj.files.wordpress.com/2015/11/bio_north.jpg",
+      title: "Code Storm 202",
+      description: "Code, Create, Conquer: The Ultimate Hackathon",
+      url: "/youthfest",
+      id: "two",
     },
     {
-      title: "LUrban Decay",
-      description: "Lorem ipsum, dolor sit amet...",
-      imageUrl: "https://images7.alphacoders.com/878/878663.jpg",
+      title: "Fish Tank",
+      description: "From Pitch to Rich: The battlefield of pioneers",
+      url: "/youthfest",
+      id: "three",
     },
-    {
-      title: "The Migration",
-      description: "Lorem ipsum, dolor sit amet...",
-      imageUrl: "https://da.se/app/uploads/2015/09/simon-december1994.jpg",
-    },
+    // {
+    //   title: "The Migration",
+    //   description: "Lorem ipsum, dolor sit amet...",
+    //   url: "https://da.se/app/uploads/2015/09/simon-december1994.jpg",
+    //   id: "four",
+    // },
   ]);
 
   const handleSliderNavigation = useCallback(
@@ -55,25 +60,48 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    const intervalId = setInterval(rotateItems, 10000); // Rotate every 3 seconds
+    const intervalId = setInterval(rotateItems, 1000000); // Rotate every 3 seconds
 
     return () => {
       clearInterval(intervalId); // Clean up the interval
     };
   }, [rotateItems]);
 
+  // const handleItemClick = useCallback(
+  //   (index) => {
+  //     console.log(index)
+  //     const updatedItems = [...sliderItems];
+  //     const clickedItem = updatedItems.splice(index, 1)[0];
+  //     updatedItems.splice(1, 0, clickedItem);
+  //     setSliderItems(updatedItems);
+      
+  //   },
+  //   [sliderItems]
+  // );
   const handleItemClick = useCallback(
     (index) => {
-      console.log(index)
-      const updatedItems = [...sliderItems];
-      const clickedItem = updatedItems.splice(index, 1)[0];
-      updatedItems.splice(1, 0, clickedItem)
+      console.log(index);
+      const updatedItems = [...sliderItems]; // Create a copy of the sliderItems array
+  
+      // Handle edge cases (clicked item is already first or last)
+      if (index === 0) {
+        return; // No need to swap if clicked item is already first
+      } else if (index === updatedItems.length - 1) {
+        // Move clicked item (last) to first and first item to second
+        [updatedItems[0], updatedItems[index]] = [updatedItems[index], updatedItems[0]];
+      } else {
+        // General case (clicked item is somewhere in the middle)
+        // Move clicked item (index) to first and first item to last
+        const clickedItem = updatedItems.splice(index, 1)[0];
+        updatedItems.push(updatedItems.shift()); // Move first item to last
+        updatedItems.unshift(clickedItem); // Insert clicked item at first position
+      }
+  
       setSliderItems(updatedItems);
-      
     },
     [sliderItems]
   );
-
+  
   return (
     <section id="home-carousel">
       <ul className="hero-slider">
@@ -82,12 +110,13 @@ const Hero = () => {
             key={index}
             title={item.title}
             description={item.description}
-            imageUrl={item.imageUrl}
+            url={item.url}
+            id={item.id}
             onClick={() => handleItemClick(index)}
           />
         ))}
       </ul>
-      <nav className="hero-nav">
+      {/* <nav className="hero-nav">
         <button
           className="hero-btn prev"
           onClick={handleSliderNavigation}
@@ -96,7 +125,7 @@ const Hero = () => {
           className="hero-btn next"
           onClick={handleSliderNavigation}
         >⏭️</button>
-      </nav>
+      </nav> */}
     </section>
   );
 };
