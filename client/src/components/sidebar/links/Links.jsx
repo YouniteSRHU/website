@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const variants = {
   open: {
@@ -25,9 +25,9 @@ const itemVariants = {
   },
 };
 
-const Links = () => {
-  const items = ["YOUTHFEST", "EVENTS", "ABOUT-US", "CONTACT-US"];
-
+const Links = ({setOpen}) => {
+  const items = ["YOUTHFEST", "ABOUT-US", "CONTACT-US"];
+  const navigate = useNavigate()
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
@@ -37,7 +37,8 @@ const Links = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
         >
-        <Link to={`${item}`}> {item}</Link> 
+        <a onClick={()=>{navigate(`/${item}`)
+    setOpen((prev) => !prev)}}> {item}</a> 
         </motion.div>
       ))}
     </motion.div>
