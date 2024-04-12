@@ -91,12 +91,12 @@
   background-repeat: no-repeat; */
 }
 
-#animated-gif h2, #animated-gif p {
+#animated-gif h2, #animated-gif p, #one h2,#one p {
   color: #003366 !important;
   
 }
 
-#animated-gif .hero-button {
+#animated-gif .hero-button, #one .hero-button {
   color: #8b1310;
   -webkit-text-stroke: 0px;
   border: 2px solid #8b1310;

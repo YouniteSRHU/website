@@ -52,11 +52,9 @@
     width: 25px;
     height: 25px;
     border-radius: 10px;
-    padding: 20px;
-    bottom: 25px;
+    top: 75px;
     right: 25px;
-    background-color: #013D7F;
-    border: 5px solid white;
+    
     cursor: pointer;
     display: none;
     @include tablet{
@@ -66,9 +64,6 @@
       display: block;
     }
   }
-@include tablet{
-  display: block;
-}
 
   @include mobile{
     display: block;
