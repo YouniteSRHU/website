@@ -1,5 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Link } from "react-router-dom";
 import { EffectCoverflow,Pagination, Navigation } from 'swiper/modules';
 // Import Swiper styles
 import "swiper/css";
@@ -19,30 +20,26 @@ const EventSlider = ({eventType}) => {
 
     const data = [
         {
-            urlImage: "https://www.yudiz.com/codepen/expandable-animated-card-slider/dota-2.jpg",
+            urlImage: "/hackathon.png",
+            title: "Hackathon",
+            desc: "Innovate solutions! Tackle climate change, healthcare disparities, or social injustice."
+        },
+        {
+            urlImage: "/fish-tank.png",
+            title: "Noteworthy technology acquisitions 2021",
+            desc: "Calling all entrepreneurs! Bubble up your innovation/startup to a panel of investors."
+        },
+        {
+            urlImage: "/esports.jpg",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
         {
-            urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
+            urlImage: "/book-fair.png",
             title: "Noteworthy technology acquisitions 2021",
             desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
         },
-        {
-            urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
-            title: "Noteworthy technology acquisitions 2021",
-            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-        },
-        {
-            urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
-            title: "Noteworthy technology acquisitions 2021",
-            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-        },
-        {
-            urlImage: "https://res.infoq.com/articles/hackathon-developer-innovation/en/headerimage/generatedHeaderImage-1662578814159.jpg",
-            title: "Noteworthy technology acquisitions 2021",
-            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-        },
+        
     ]
     return (
         <div >
@@ -71,7 +68,9 @@ const EventSlider = ({eventType}) => {
                     {/* slider */}
                     {data.map((card, i) => (
                         <SwiperSlide key={i}>
+                            <Link to="/youthfest/1">
                             <EventsCard card={card} className="card"/>
+                            </Link>
                         </SwiperSlide>
                     ))}
                     <div className="slider-controler">

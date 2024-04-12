@@ -10,13 +10,22 @@
   position: relative;
 }
 
+.navbar:nth-child(2) {
+  justify-content: center;
+}
+
 .logo{
-  width: 7rem;
+  width: 6rem;
   aspect-ratio: 5/2;
 }
 
 .srhulogo{
-  width: 10rem;
+  height: 30px;
+  justify-self: center !important;
+}
+
+.srhulogo > img {
+  object-fit: contain;
 }
 
 .menu-toggle {
@@ -43,7 +52,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .navbar{
     padding:1rem;
   }
@@ -51,10 +60,9 @@
     width: 6rem;
   }
   
-.srhulogo{
+/* .srhulogo{
   width: 8rem;
-  align-self: flex-end;
-}
+} */
   .nav-links {
     list-style: none;
     display: none;
