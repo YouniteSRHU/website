@@ -15,6 +15,10 @@
   aspect-ratio: 5/2;
 }
 
+.srhulogo{
+  width: 10rem;
+}
+
 .menu-toggle {
   display: none;
 }
@@ -46,6 +50,11 @@
   .logo{
     width: 6rem;
   }
+  
+.srhulogo{
+  width: 8rem;
+  align-self: flex-end;
+}
   .nav-links {
     list-style: none;
     display: none;
