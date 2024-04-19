@@ -1,7 +1,7 @@
 
 # Server for YOUNITE Website
 
-This express.js server serves axios requests from the 
+This express.js server serves axios requests from the react.js frontend section. It provides data related to the respective events, fest etc.
 
 ## Getting Started
 
