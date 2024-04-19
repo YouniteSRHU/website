@@ -11,7 +11,7 @@
   background-size: cover;
   border-radius: 20px;
   box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
-  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s !important;
 
   &:nth-child(1) {
     left: 0;

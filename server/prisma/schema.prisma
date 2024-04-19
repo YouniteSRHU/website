@@ -14,61 +14,70 @@ datasource db {
 }
 
 model Fest {
-  fest_id Int @id @default(autoincrement())
-  fest_name String
-  fest_desc String
-  images Image[]
-  fest_date DateTime @default(now())
-  events Event[]
+  fest_id    Int              @id @default(autoincrement())
+  fest_name  String
+  fest_desc  String
+  images     Image[]
+  fest_date  DateTime         @default(now())
+  events     Event[]
+  guidelines EventGuideline[]
+  tcs        EventTC[]
 }
 
 model Event {
-  event_id Int @id @default(autoincrement())
-  fest Fest? @relation(fields: [festId], references: [fest_id])
-  festId Int?
-  participants Participant[]
-  event_name String
-  event_desc String?
-  images Image[]
-  guidelines EventGuideline[]
-  tc EventTC[]
+  event_id          Int              @id @default(autoincrement())
+  fest              Fest?            @relation(fields: [festId], references: [fest_id])
+  festId            Int?
+  participants      Participant[]
+  event_name        String
+  event_desc        String?
+  images            Image[]
+  guidelines        EventGuideline[]
+  tc                EventTC[]
   registration_link String?
-  colliding_events String?
-  event_datetime String?
-  event_venue String?
-  event_map String?
-  fest_identifier String? @db.Char(1)
+  brochure_link     String?
+  colliding_events  String?
+  event_datetime    String?
+  event_venue       String?
+  event_map         String?
+  contact_details   String?
+  fest_identifier   String?          @db.Char(1)
 }
 
 model Image {
-  image_id Int @id @default(autoincrement())
+  image_id  Int     @id @default(autoincrement())
   image_src String
-  event Event @relation(fields: [eventId], references: [event_id])
-  eventId Int
-  fest Fest? @relation(fields: [festId], references: [fest_id])
-  festId Int?
+  gallery   Boolean @default(true)
+  event     Event?  @relation(fields: [eventId], references: [event_id])
+  eventId   Int?
+  fest      Fest?   @relation(fields: [festId], references: [fest_id])
+  festId    Int?
 }
 
 model EventGuideline {
-  guideline_id Int @id @default(autoincrement())
-  guideline String
-  event Event? @relation(fields: [eventId], references: [event_id])
-  eventId Int?
+  guideline_id Int    @id @default(autoincrement())
+  guideline    String
+  event        Event? @relation(fields: [eventId], references: [event_id])
+  eventId      Int?
+  fest         Fest?  @relation(fields: [festId], references: [fest_id])
+  festId       Int?
 }
 
 model EventTC {
-  tc_id Int @id @default(autoincrement())
-  tc String
-  event Event? @relation(fields: [eventId], references: [event_id])
+  tc_id   Int    @id @default(autoincrement())
+  tc      String
+  event   Event? @relation(fields: [eventId], references: [event_id])
   eventId Int?
+  fest    Fest?  @relation(fields: [festId], references: [fest_id])
+  festId  Int?
 }
 
 model Participant {
-  participant_id Int @id @default(autoincrement())
-  participant_name String
+  participant_id    Int     @id @default(autoincrement())
+  participant_name  String
   organisation_name String?
-  events Event[]
-  mobile String
-  email String
-  isVolunteer Boolean
+  events            Event[]
+  mobile            String
+  email             String
+  isVolunteer       Boolean
 }
