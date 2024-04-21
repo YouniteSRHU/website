@@ -160,10 +160,10 @@ app.use('/api/', eventsRouter);
 // app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
-  res.send(404);
-  next();
-});
+// app.use((req, res, next) => {
+//   res.send(404);
+//   next();
+// });
 
 // error handler
 
