@@ -60,7 +60,6 @@
     background: #222;
     cursor: pointer;
   }
-  
 @media screen and (max-width: 800px) {
     .filterItem ul button{
         padding: 0.5rem 0.5rem;

@@ -15,32 +15,7 @@ import { FaChevronCircleLeft , FaChevronCircleRight} from "react-icons/fa"
 // Import prisma
 // import prisma from "/DB/db.config.js";
 
-const EventSlider = ({eventType}) => {
-
-
-    const data = [
-        {
-            urlImage: "/hackathon.png",
-            title: "Hackathon",
-            desc: "Innovate solutions! Tackle climate change, healthcare disparities, or social injustice."
-        },
-        {
-            urlImage: "/fish-tank.png",
-            title: "Noteworthy technology acquisitions 2021",
-            desc: "Calling all entrepreneurs! Bubble up your innovation/startup to a panel of investors."
-        },
-        {
-            urlImage: "/esports.jpg",
-            title: "Noteworthy technology acquisitions 2021",
-            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-        },
-        {
-            urlImage: "/book-fair.png",
-            title: "Noteworthy technology acquisitions 2021",
-            desc: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-        },
-        
-    ]
+const EventSlider = ({eventType, data}) => {
     return (
         <div >
             <div div className="container">
@@ -68,7 +43,7 @@ const EventSlider = ({eventType}) => {
                     {/* slider */}
                     {data.map((card, i) => (
                         <SwiperSlide key={i}>
-                            <Link to="/youthfest/1">
+                            <Link to={`/youthfest/${card.event_id}`}>
                             <EventsCard card={card} className="card"/>
                             </Link>
                         </SwiperSlide>
