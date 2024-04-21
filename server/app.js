@@ -7,6 +7,7 @@ import logger from 'morgan';
 import { config } from 'dotenv';
 import cors from 'cors';
 
+import indexRouter from './routes/index.js';
 import eventsRouter from './routes/events.js';
 // import usersRouter from './routes/users.js';
 import prisma from './DB/db.config.js';
@@ -154,6 +155,7 @@ async function insertImages() {
 // createEvent();
 // fetchEvents();
 
+app.use('/', indexRouter);
 app.use('/api/', eventsRouter);
 // app.use('/users', usersRouter);
 
