@@ -1,6 +1,7 @@
 {
   "name": "younite-website-backend-server",
   "version": "0.0.0",
+  "main": "app.js",
   "type": "module",
   "main": "index.js",
   "scripts": {
