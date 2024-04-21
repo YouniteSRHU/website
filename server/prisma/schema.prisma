@@ -14,14 +14,15 @@ datasource db {
 }
 
 model Fest {
-  fest_id    Int              @id @default(autoincrement())
-  fest_name  String
-  fest_desc  String
-  images     Image[]
-  fest_date  DateTime         @default(now())
-  events     Event[]
-  guidelines EventGuideline[]
-  tcs        EventTC[]
+  fest_id                Int              @id @default(autoincrement())
+  fest_name              String
+  fest_desc              String
+  fest_registration_link String?
+  images                 Image[]
+  fest_date              DateTime         @default(now())
+  events                 Event[]
+  guidelines             EventGuideline[]
+  tcs                    EventTC[]
 }
 
 model Event {
