@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export const api = axios.create({
-    baseURL: "https://website-server-hzso.onrender.com/api/",
+    baseURL: "https://website-theta-eosin-97.vercel.app/api/",
 });
 
 
