@@ -43,16 +43,18 @@
     }
   }
 
+  #hamburger {
+    transform: translate(-45%, -45%);
+  }
   .toggle-button {
     z-index: 999;
     position: fixed;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
-    top: 25px;
+    border-radius: 10px;
+    top: 75px;
     right: 25px;
-    background-color: rgba(86, 85, 85, 0.121);
-    border: none;
+    
     cursor: pointer;
     display: none;
     @include tablet{
@@ -62,9 +64,6 @@
       display: block;
     }
   }
-@include tablet{
-  display: block;
-}
 
   @include mobile{
     display: block;
