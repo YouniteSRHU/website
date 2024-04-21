@@ -154,17 +154,17 @@ async function insertImages() {
 // insertImages();
 // createEvent();
 // fetchEvents();
-
-app.use('/', indexRouter);
+app.listen(port, () => console.log(`Listening on port ${port}`));
+// app.use('/', indexRouter);
 app.use('/api/', eventsRouter);
 // app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {
-  res.send(404);
-  next();
-});
+// app.use((req, res, next) => {
+//   res.send(404);
+//   next();
+// });
 
 // error handler
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+
