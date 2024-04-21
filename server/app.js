@@ -13,10 +13,10 @@ import eventsRouter from './routes/events.js';
 import prisma from './DB/db.config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-if (process.env.NODE_ENV !== "production") {
-  const envPath = path.resolve(__dirname, ".env");
-  config({ path: envPath });
-}
+// if (process.env.NODE_ENV !== "production") {
+//   const envPath = path.resolve(__dirname, ".env");
+//   config({ path: envPath });
+// }
 
 const app = express();
 const port = 3000;
