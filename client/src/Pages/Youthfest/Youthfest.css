@@ -1,0 +1,11 @@
+.festDate{
+    font-weight: 900;
+    font-size: xx-large;
+    color:#013D7F ;
+}
+
+@media screen and ( max-width: 500px ){
+    .festDate{
+        font-size: large;
+    }
+}

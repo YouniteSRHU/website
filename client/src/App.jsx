@@ -22,7 +22,7 @@ function App() {
                 <Route path="/" element={<Website />} />
                 <Route path="/YOUTHFEST">
                   <Route index element={<Youthfest />} />
-                  <Route path=":1" element={<SingleEvent />} />
+                  <Route path=":id" element={<SingleEvent />} />
                 </Route>
                 <Route path="/CONTACT-US" element={<Contact />} />
                 <Route path="/ABOUT-US" element={<AboutUs />} />

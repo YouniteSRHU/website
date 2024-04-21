@@ -35,7 +35,7 @@ const SingleEvent = () => {
     return (
         <>
             <Warning colliding_events={data?.colliding_events} />
-            <EventHeader eh_imageURl={data.images} eh_heading={data?.event_name} eh_desc={data?.event_desc} />
+            <EventHeader eh_imageURl={data.images} eh_heading={data?.event_name} eh_desc={data?.event_desc} regLink={data?.registration_link}/>
             <EventInfo
                 date={data?.event_datetime}
                 venue={data?.event_venue}

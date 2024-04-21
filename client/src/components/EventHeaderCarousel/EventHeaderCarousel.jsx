@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, easeInOut } from 'framer-motion'
 import './EventHeaderCarousel.css'
 const EventHeaderCarousel = ({ imageUrl }) => {
 
     const images = [
         imageUrl[0].image_src,
         imageUrl[1].image_src,
-        // imageUrl[2].image_src.value()
+        imageUrl[2].image_src
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,7 +14,7 @@ const EventHeaderCarousel = ({ imageUrl }) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000); // Change image every 3 seconds
+        }, 3000); // Change image every 3 seconds
 
         return () => clearInterval(interval);
     }, []);
@@ -29,7 +29,7 @@ const EventHeaderCarousel = ({ imageUrl }) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 3, ease: "easeIn" }}
                 />
             </AnimatePresence>
         </div>
