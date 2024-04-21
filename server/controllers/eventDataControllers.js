@@ -28,6 +28,7 @@ export const specificEventController = async (req, res) => {
 
 export const youthFestPageController = async (req, res) => {
   const pageData = await prisma.fest.findUnique({
+
     where: {
       fest_id: 1,
     },
@@ -38,11 +39,11 @@ export const youthFestPageController = async (req, res) => {
           event_name: true,
           event_desc: true,
           fest_identifier: true,
-          images: { 
+          images: {
             select: {
-                image_src: true,
-            } 
-        },
+              image_src: true,
+            }
+          },
         },
       },
     },
