@@ -22,7 +22,7 @@ const AboutUsHeader = () => {
             <motion.div className="about-us-text" variants={textVariants}>
                 <motion.h2 variants={textVariants}>ABOUT US</motion.h2>
                 <motion.p variants={textVariants}>
-                Younite is a dynamic student-led committee at SRHU (Swami Rama Himalayan University) that bridges the gap between various colleges within the university. Through a vibrant array of events, workshops, and cultural activities, Younite fosters collaboration, creativity, and a sense of community.
+                Younite is a dynamic student-led ecosystem at SRHU (Swami Rama Himalayan University) that bridges the gap between various colleges within the university. Through a vibrant array of events, workshops, and cultural activities, Younite fosters collaboration, creativity, and a sense of community.
                 </motion.p>
             </motion.div>
         </motion.div>
