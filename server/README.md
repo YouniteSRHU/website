@@ -1,20 +1,20 @@
 
-# Pug ESM Template for Express.js
+# Server for YOUNITE Website
 
-Tired of writing ES module (ESM) code for your Express.js projects? Look no further! This template provides a ready-to-use Express.js project template written in ES modules and uses Pug as the template engine. It's a perfect starting point for your next web application.
+This express.js server serves axios requests from the react.js frontend section. It provides data related to the respective events, fest etc.
 
 ## Getting Started
 
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/ShivanshKothari/pug-esm-template.git
+   git clone https://github.com/YouniteSRHU/website.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd pug-esm-template
+   cd website/server
    ```
 
 3. Install dependencies:
@@ -36,25 +36,11 @@ Tired of writing ES module (ESM) code for your Express.js projects? Look no furt
 - `bin/www`: Entry point for the server.
 - `public/`: Static files (CSS, images, etc.).
 - `routes/`: Express routes.
-- `views/`: Pug templates.
-
-## Customizing the Project
-
-Feel free to customize the `package.json` file with your project details:
-
-```json
-{
-  "name": "your-project-name",
-  "version": "1.0.0",
-  "description": "Your project description",
-  "author": "Your Name",
-  // ... other details ...
-}
-```
+- `controllers/`: Controllers for routes
 
 ## Contributing
 
-If you encounter any issues or have suggestions for improvements, feel free to open an [issue](https://github.com/ShivanshKothari/pug-esm-template/issues) or submit a [pull request](https://github.com/ShivanshKothari/pug-esm-template/pulls).
+We welcome any contributions in order to enhance the website. If you encounter any issues or have suggestions for improvements, feel free to open an [issue](https://github.com/ShivanshKothari/pug-esm-template/issues) or submit a [pull request](https://github.com/ShivanshKothari/pug-esm-template/pulls).
 
 ## License
 
