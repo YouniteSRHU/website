@@ -154,8 +154,8 @@ async function insertImages() {
 // insertImages();
 // createEvent();
 // fetchEvents();
-
-app.use('/', indexRouter);
+app.listen(port, () => console.log(`Listening on port ${port}`));
+// app.use('/', indexRouter);
 app.use('/api/', eventsRouter);
 // app.use('/users', usersRouter);
 
@@ -167,4 +167,4 @@ app.use('/api/', eventsRouter);
 
 // error handler
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+
