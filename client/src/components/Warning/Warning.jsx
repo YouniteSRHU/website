@@ -1,7 +1,7 @@
 import React from 'react'
 import './Warning.css'
 import { motion } from 'framer-motion';
-const Warning = ({colliding_events}) => {
+const Warning = ({message}) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -11,7 +11,7 @@ const Warning = ({colliding_events}) => {
             className="warning-container"
         >
             <p className="warning-text">
-                <strong>Warning:</strong> This event has the same timing as {colliding_events}.
+                <strong>IMPORTANT!:</strong><span>{message}</span>.
             </p>
         </motion.div>
     )

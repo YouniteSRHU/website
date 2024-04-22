@@ -3,9 +3,23 @@
 .event-info {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     padding: 1rem 4rem;
   }
-  
+  .event-details{
+    color: #013D7F;
+    font-size: 1.2rem;
+    padding: 1.5rem 0rem;
+  }
+  .details{
+    display: flex;
+    gap: 10px;
+    padding:  2px;
+  }
+  .second-section{
+    display: flex;
+    justify-content: space-between;
+  }
   .text-section {
     max-width: 50%;
     text-align: left;
@@ -30,12 +44,26 @@
     max-width: 50%;
     border-radius: 10px;
   }
+  @media screen and (max-width:800px){
+    .second-section{
+      flex-direction: column;
+    }
+    .text-section,
+    .map-image {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 500px) {
     .event-info {
       flex-direction: column;
       align-items: start;
       padding: 1rem;
+    }
+    .details{
+      gap: 5px;
+      text-align:left;
     }
       
       .guidelines>h2, .terms>h2{
@@ -43,10 +71,5 @@
         font-weight: 900;
         font-size: 1.5rem;
       }
-    .text-section,
-    .map-image {
-      max-width: 100%;
-      margin-bottom: 20px;
-    }
   }
   
