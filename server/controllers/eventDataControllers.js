@@ -50,3 +50,13 @@ export const youthFestPageController = async (req, res) => {
   });
   res.json(pageData);
 };
+
+export const newsPageController = async (req, res) => {
+  // get data in descending order of news_id
+  const pageData = await prisma.news.findMany({
+    orderBy: {
+      news_id: "desc",
+    }
+  });
+  res.json(pageData);
+};

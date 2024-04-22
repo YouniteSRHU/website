@@ -84,7 +84,8 @@ model Participant {
 }
 
 model News {
-  news_id      Int     @id @default(autoincrement())
+  news_id      Int      @id @default(autoincrement())
   news_heading String?
   news_text    String
+  news_time    DateTime @default(now())
 }
