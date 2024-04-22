@@ -16,6 +16,7 @@ const Navbar = () => {
       <div className="navbar">
       <ul className={`nav-links ${showMenu ? "show" : ""}`}>
         <li><Link to={"/YOUTHFEST"}>YOUTHFEST</Link></li>
+        <li><Link to={"/NEWS"}>NEWS</Link></li>
         <li><Link to={"/ABOUT-US"}>ABOUT US</Link></li>
         <li><Link to={"/CONTACT-US"}>CONTACT-US</Link></li>
       </ul>

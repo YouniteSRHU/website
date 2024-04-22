@@ -1,0 +1,72 @@
+.latest-updates {
+  padding: 1rem 4rem;
+}
+.latest-updates h2{
+    font-size: xx-large;
+    font-weight: 900;
+    color: #013D7F;
+    
+}
+.update-card {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.update-card:nth-child(even) {
+  background-color: #B9D9F0;
+}
+
+.update-card:nth-child(odd) {
+  background-color: #A6A6A6;
+}
+.update-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #013D7F;
+  font-weight: 700;
+}
+
+.update-card p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #013D7F;
+  text-align: left;
+}
+
+.update-card small {
+  display: flex;
+  font-size: 0.8rem;
+  color: #393838;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-card a {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .latest-updates{
+        padding: 1rem;
+    }
+  .update-card {
+    padding: 15px;
+  }
+  .update-card p {
+    font-size: 0.8rem;
+  }
+  
+}
