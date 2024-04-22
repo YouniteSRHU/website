@@ -11,7 +11,7 @@ const Warning = ({message}) => {
             className="warning-container"
         >
             <p className="warning-text">
-                <strong>IMPORTANT!:</strong><span>{message}</span>.
+                <strong>IMPORTANT!:</strong><span>{message}</span>
             </p>
         </motion.div>
     )
