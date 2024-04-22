@@ -11,6 +11,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import News from "./Pages/News/News";
 function App() {
   const queryClient = new QueryClient();
   return (
@@ -26,6 +27,7 @@ function App() {
                 </Route>
                 <Route path="/CONTACT-US" element={<Contact />} />
                 <Route path="/ABOUT-US" element={<AboutUs />} />
+                <Route path="/NEWS" element={<News />} />
               </Route>
             </Routes>
           </Suspense>
