@@ -80,5 +80,12 @@ model Participant {
   events            Event[]
   mobile            String
   email             String
-  isVolunteer       Boolean
+  position          Int     @db.SmallInt
+}
+
+model News {
+  news_id      Int      @id @default(autoincrement())
+  news_heading String?
+  news_text    String
+  news_time    DateTime @default(now())
 }
