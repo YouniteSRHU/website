@@ -80,7 +80,7 @@ model Participant {
   events            Event[]
   mobile            String
   email             String
-  isVolunteer       Boolean
+  position          Int     @db.SmallInt
 }
 
 model News {
