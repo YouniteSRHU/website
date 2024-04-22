@@ -2,17 +2,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './EventInfo.css';
-
-const EventInfo = ({ date, venue, guidelines, terms, mapImage }) => {
+import { FaCalendarAlt, FaMapMarkerAlt, FaPhone, FaFilePdf } from 'react-icons/fa'
+import { motion } from 'framer-motion';
+const EventInfo = ({ date, venue, guidelines, terms, mapImage,phone, brochureLink }) => {
     return (
         <div className="event-info">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className="event-details"
+            >
+                <p className='details'>
+                    <span><FaCalendarAlt /></span> <span> {date}</span>
+                </p>
+                <p className='details'>
+                    <span><FaMapMarkerAlt /></span> <span>{venue}</span>
+                </p>
+                <p className='details'>
+                    <span><FaPhone /></span> <span> {phone}</span>
+                </p>
+                <a href={brochureLink} target="blank" rel="noopener noreferrer" className='details'>
+                    <span><FaFilePdf /></span> <span>View Brochure</span>
+                </a>
+            </motion.div>
+            <div className="second-section">
             <div className="text-section">
-                <p>{date} at {venue}</p>
                 <div className="guidelines">
                     <h2>GUIDELINES</h2>
                     <ul>
                         {guidelines.map((rule, index) => (
-                            <li key={index}>&#x2022;  {rule.guideline}</li>
+                            <li key={index}><span>&#x2B24;</span>  <span>{rule.guideline}</span></li>
                         ))}
                     </ul>
                 </div>
@@ -20,13 +41,13 @@ const EventInfo = ({ date, venue, guidelines, terms, mapImage }) => {
                     <h2>TERMS & CONDITIONS</h2>
                     <ul>
                         {terms.map((rule, index) => (
-                            <li key={index}>&#x2022;  {rule.tc}</li>
+                            <li key={index}>&#x2B24;  {rule.tc}</li>
                         ))}
                     </ul>
                 </div>
+                </div>
+                <img src={mapImage} alt="Map" className="map-image" />
             </div>
-
-            <img src={mapImage} alt="Map" className="map-image" />
         </div>
     );
 };
