@@ -9,11 +9,20 @@
   color: #ffffff;
   font-size: 16px;
   line-height: 1.5;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
-
+a{
+  cursor: pointer;
+}
 /* Responsive styles */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .warning-container {
     max-width: 100%;
+  }
+  .warning-text{
+    font-size: 12px;
   }
 }

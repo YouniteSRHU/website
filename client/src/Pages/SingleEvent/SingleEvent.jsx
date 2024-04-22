@@ -5,7 +5,7 @@ import Warning from '../../components/Warning/Warning'
 import EventInfo from '../../components/EventInfo/EventInfo'
 import { useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
-import { getEvent } from '../../utils/api'
+import { getEvent,getFest } from '../../utils/api'
 import { PuffLoader } from "react-spinners";
 const SingleEvent = () => {
     const { pathname } = useLocation();
@@ -13,6 +13,9 @@ const SingleEvent = () => {
     const { data, isLoading, isError } = useQuery(["event", id], () =>
         getEvent(id)
     );
+    const { festdata } = useQuery(["fest"], () =>
+    getFest()
+);
     if (isLoading) {
         return (
             <div className="wrapper">
@@ -34,7 +37,7 @@ const SingleEvent = () => {
     }
     return (
         <>
-            <Warning colliding_events={data?.colliding_events} />
+            <Warning message={[`This event has same timing as ${data?.colliding_events}  `,<br/>,"Every participant must fill the", <a src={`${festdata?.fest_registration_link}`} target='blank'> <strong>Yuvotsav'24 Basic Registration Form</strong> (click here)</a>]} />
             <EventHeader eh_imageURl={data.images} eh_heading={data?.event_name} eh_desc={data?.event_desc} regLink={data?.registration_link}/>
             <EventInfo
                 date={data?.event_datetime}
@@ -42,6 +45,8 @@ const SingleEvent = () => {
                 guidelines={data?.guidelines}
                 terms={data?.tc}
                 mapImage={data?.event_map}
+                phone={data?.contact_details}
+                brochureLink={data?.brochure_link}
             />
         </>
     )
