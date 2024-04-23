@@ -15,16 +15,16 @@ const EventInfo = ({ date, venue, guidelines, terms, mapImage,phone, brochureLin
                 className="event-details"
             >
                 <p className='details'>
-                    <span><FaCalendarAlt /></span> <span> {date}</span>
+                    <span style={{display:"flex", justifyContent:'center', alignItems:'center'}}><FaCalendarAlt /></span> <span> {date}</span>
                 </p>
                 <p className='details'>
-                    <span><FaMapMarkerAlt /></span> <span>{venue}</span>
+                    <span style={{display:"flex", justifyContent:'center', alignItems:'center'}}><FaMapMarkerAlt /></span> <span>{venue}</span>
                 </p>
                 <p className='details'>
-                    <span><FaPhone /></span> <span> {phone}</span>
+                    <span style={{display:"flex", justifyContent:'center', alignItems:'center'}}><FaPhone /></span> <span> {phone}</span>
                 </p>
                 <a href={brochureLink} target="blank" rel="noopener noreferrer" className='details'>
-                    <span><FaFilePdf /></span> <span>View Brochure</span>
+                    <span style={{display:"flex", justifyContent:'center', alignItems:'center'}}><FaFilePdf /></span> <span>View Brochure</span>
                 </a>
             </motion.div>
             <div className="second-section">

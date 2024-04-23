@@ -35,7 +35,7 @@ const News = () => {
                 "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713803012/Designer_lgupd4.jpg"
             },
             {
-                "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713803013/younite_srhut_a6f8my.png"
+                "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713897996/younite_srhut_ntummf.png"
             },
             {
                 "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713803016/younite_srhut_1_artaih.png"
