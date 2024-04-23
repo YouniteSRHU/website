@@ -4,6 +4,7 @@ import EventHeader from '../../components/EventHeader/EventHeader'
 import { useQuery } from "react-query";
 import { getFest } from '../../utils/api'
 import { Hourglass } from "react-loader-spinner";
+import dayjs from 'dayjs';
 import './Youthfest.css'
 import Warning from '../../components/Warning/Warning';
 const Youthfest = () => {
@@ -36,7 +37,7 @@ const Youthfest = () => {
         <div className='youth-container'>
             <Warning message={["Every participant must fill the", <a src={`${data?.fest_registration_link}`} target='blank'> <strong>Yuvotsav'24 Basic Registration Form</strong> (click here)</a>]}/>
             <EventHeader eh_imageURl={images} eh_heading={data?.fest_name} eh_desc={data?.fest_desc} display_prop={"none"} />
-            <p className="festDate">{data?.fest_date}</p>
+            <p className="festDate"><span>DATE</span><span>:</span><span>{dayjs(data?.fest_date).format('DD-MM-YYYY')}</span></p>
             <EventSlider eventType={"Flagship Events"} data={flagshipData} />
             <EventSlider eventType={"non Flagship Events"} data={nonFlagshipData} />
         </div>

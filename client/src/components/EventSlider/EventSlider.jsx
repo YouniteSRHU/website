@@ -1,6 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow,Pagination, Navigation } from 'swiper/modules';
 // Import Swiper styles
 import "swiper/css";
@@ -16,6 +15,7 @@ import { FaChevronCircleLeft , FaChevronCircleRight} from "react-icons/fa"
 // import prisma from "/DB/db.config.js";
 
 const EventSlider = ({eventType, data}) => {
+    
     return (
         <div >
             <div div className="container">
@@ -43,9 +43,7 @@ const EventSlider = ({eventType, data}) => {
                     {/* slider */}
                     {data.map((card, i) => (
                         <SwiperSlide key={i}>
-                            <Link to={`/youthfest/${card.event_id}`}>
-                            <EventsCard card={card} className="card"/>
-                            </Link>
+                            <EventsCard card={card} className="card" />
                         </SwiperSlide>
                     ))}
                     <div className="slider-controler">

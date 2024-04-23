@@ -7,6 +7,22 @@
   min-height: 10vh;
 }
 
+.social-media{
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+.social-media>a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons{
+  width: 2rem;
+}
+.footer-content{
+  width: 20rem;
+}
 .footer-content p {
   margin: 0;
 }
@@ -27,5 +43,8 @@
   .social-media a {
     margin-left: 0;
     margin-top: 5px;
+  }
+  .social-icons{
+    width: 1.5rem;
   }
 }
