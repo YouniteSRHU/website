@@ -2,7 +2,7 @@ import React from 'react'
 import Warning from '../../components/Warning/Warning'
 import EventHeader from '../../components/EventHeader/EventHeader'
 import LatestNews from '../../components/LatestNews/LatestNews'
-import useNews from '../../Hooks/useNews'
+import {useNews} from '../../Hooks/useNews'
 import { Triangle } from "react-loader-spinner";
 
 const News = () => {
