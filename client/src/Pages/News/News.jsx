@@ -2,41 +2,60 @@ import React from 'react'
 import Warning from '../../components/Warning/Warning'
 import EventHeader from '../../components/EventHeader/EventHeader'
 import LatestNews from '../../components/LatestNews/LatestNews'
-
+import useNews from '../../Hooks/useNews'
+import { Triangle } from "react-loader-spinner";
 
 const News = () => {
-    const updates =[
-        {
-            id:2,
-            title:"nth update",
-            content:"aritenoiarestnorsietaroisnt sreti nrsiet seit rient nrsi tesrin iesrni tirsn eires nsrie eitsr iensri isenir nern eireni rinse iensrintirnsinerst niestrniet nisreniesrtniesreni enisreni srin isrsrti inesr streninstrniesrtenistrsrieninsrienstriiirstesetn enes enstenImportant note: Regularly check the specific whatsapp groups also.",
-            time:"13 may 2024, 10am"
-        },
-        {
-            id:1,
-            title:"nth-1 update",
-            content:"aritenoiarestnorsietaroisnt sreti nrsiet seit rient nrsi tesrin iesrni tirsn eires nsrie eitsr iensri isenir nern eireni rinse iensrintirnsinerst niestrniet nisreniesrtniesreni enisreni srin isrsrti inesr streninstrniesrtenistrsrieninsrienstriiirstesetn enes enstenImportant note: Regularly check the specific whatsapp groups also.",
-            time:"13 may 2024, 10am"
-        },
-        {
-            id:3,
-            title:"nth-2 update",
-            content:"aritenoiarestnorsietaroisnt sreti nrsiet seit rient nrsi tesrin iesrni tirsn eires nsrie eitsr iensri isenir nern eireni rinse iensrintirnsinerst niestrniet nisreniesrtniesreni enisreni srin isrsrti inesr streninstrniesrtenistrsrieninsrienstriiirstesetn enes enstenImportant note: Regularly check the specific whatsapp groups also.",
-            time:"13 may 2024, 10am"
-        },
-        {
-            id:4,
-            title:"latest",
-            content:"aritenoiarestnorsietaroisnt sreti nrsiet seit rient nrsi tesrin iesrni tirsn eires nsrie eitsr iensri isenir nern eireni rinse iensrintirnsinerst niestrniet nisreniesrtniesreni enisreni srin isrsrti inesr streninstrniesrtenistrsrieninsrienstriiirstesetn enes enstenImportant note: Regularly check the specific whatsapp groups also.",
-            time:"13 may 2024, 10am"
-        }
-        
-    ]
+    const {data, isError, isLoading} = useNews()
+    if (isLoading) {
+        return (
+            <div className="wrapper">
+                <div className="flexCenter paddings">
+                    <Triangle/>
+                </div>
+            </div>
+        );
+    }
+
+    if (isError) {
+        return (
+            <div className="wrapper">
+                <div className="flexCenter paddings">
+                    <span>Error while fetching the property details</span>
+                </div>
+            </div>
+        );
+    }
+    const headerData={
+        eh_heading:"News Corner",
+        eh_desc:"Hello visitor! This is the news corner. Here you will get the latest updates related to the events. Also make sure to follow us on instagram 😉",
+        instalink:"https://www.instagram.com/younite_srhu/",
+        images :[
+            {
+                "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713803012/Designer_lgupd4.jpg"
+            },
+            {
+                "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713803013/younite_srhut_a6f8my.png"
+            },
+            {
+                "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713803016/younite_srhut_1_artaih.png"
+            }
+        ],
+
+    }
     return (
         <>
-            <Warning message={"Do pay mind to event specific groups also."}/>
-            {/* <EventHeader/> */}
-            <LatestNews updates={updates}/>
+            <Warning message={"Do pay mind to event specific whatsapp groups also."}/>
+            <EventHeader 
+            eh_imageURl={headerData.images} 
+            eh_heading={headerData.eh_heading}
+            eh_desc={headerData.eh_desc} 
+            regLink={headerData.instalink}
+            bgColor="transparent"
+            buttonText="Instagram Link"
+            border= "2px solid white"
+            />
+            <LatestNews updates={data}/>
         </>
     )
 }

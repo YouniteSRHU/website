@@ -5,7 +5,6 @@
     font-size: xx-large;
     font-weight: 900;
     color: #013D7F;
-    
 }
 .update-card {
   padding: 20px;
@@ -30,6 +29,7 @@
   margin-bottom: 10px;
   color: #013D7F;
   font-weight: 700;
+  text-align:left;
 }
 
 .update-card p {
@@ -45,8 +45,7 @@
   display: flex;
   font-size: 0.8rem;
   color: #393838;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
 }
 
 .update-card a {

@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import './EventHeader.css'
 import EventHeaderCarousel from '../EventHeaderCarousel/EventHeaderCarousel';
-const EventHeader = ({eh_imageURl,eh_heading,eh_desc,display_prop, regLink}) => {
+const EventHeader = ({eh_imageURl,eh_heading,eh_desc,display_prop, regLink, bgColor, color, buttonText, border}) => {
   return (
     <div className="EH-container">
     <EventHeaderCarousel imageUrl={eh_imageURl}/>
@@ -28,12 +28,12 @@ const EventHeader = ({eh_imageURl,eh_heading,eh_desc,display_prop, regLink}) => 
         animate={{ opacity: 1 }} // Animation when component mounts
         transition={{ duration: 0.5, delay: 0.2 }} // Animation duration with delay
         id='EH-button'
-        style={{display:display_prop}}
+        style={{display:display_prop, background: bgColor, color: color, border: border}}
         onClick={()=>{ 
           window.open(`${regLink}`,'_blank')
           }}
       >
-        Register Now!
+        {buttonText}
       </motion.button>
     </div>
   </div>

@@ -4,23 +4,22 @@ import { FaCalendarAlt } from 'react-icons/fa';
 import './LatestNews.css'
 
 const LatestNews = ({ updates }) => {
-    const sortedUpdates = updates.sort((a, b) => b.id - a.id);
     return (
         <div className="latest-updates">
             <h2>Latest Updates</h2>
-            {sortedUpdates.slice(0, 20).map((update) => (
+            {updates.slice(0, 20).map((update) => (
                 <motion.div
-                    key={update.id}
+                    key={update.news_id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
                     className="update-card"
                 >
-                    <h3>{update.title}</h3>
-                    <p>{update.content}</p>
+                    <h3>{update.news_heading}</h3>
+                    <p>{update.news_text}</p>
                     <small>
-                        <span><FaCalendarAlt /></span> <span>{update.time}</span>
+                        <span><FaCalendarAlt /></span> <span>{update.news_time}</span>
                     </small>
                 </motion.div>
             ))}
