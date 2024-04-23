@@ -36,3 +36,18 @@ export const getFest = async () => {
         throw error;
     }
 };
+export const getNews = async () => {
+    try {
+        const response = await api.get(`/news`, {
+            timeout: 10 * 1000,
+        });
+
+        if (response.status === 400 || response.status === 500) {
+            throw response.data;
+        }
+        return response.data;
+    } catch (error) {
+        toast.error("Something went wrong");
+        throw error;
+    }
+};
