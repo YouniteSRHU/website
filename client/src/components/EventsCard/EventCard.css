@@ -135,6 +135,10 @@ button {
   transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
 }
+.item-desc>h3{
+  font-size: x-large;
+  font-weight: 900;
+}
 .item.active .item-desc {
   transform: none;
   -webkit-transform: none;
@@ -249,5 +253,8 @@ button {
     padding: 0 14px 5px;
     transform: translateY(calc(100% - 42px));
     -webkit-transform: translateY(calc(100% - 42px));
+  }
+  .item-desc>h3{
+    font-size: large;
   }
 }
