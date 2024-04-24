@@ -52,9 +52,8 @@
     width: 25px;
     height: 25px;
     border-radius: 10px;
-    top: 75px;
-    right: 25px;
-    
+    top: 70px;
+    right: 0px;
     cursor: pointer;
     display: none;
     @include tablet{
@@ -62,9 +61,15 @@
     }
     @include mobile{
       display: block;
+      top: 60px;
+    }
+    @include s-mobile{
+      top: 55px;
     }
   }
-
+  @include tablet{
+    display: block;
+  }
   @include mobile{
     display: block;
   }
