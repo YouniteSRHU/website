@@ -16,6 +16,11 @@ a {
     @content;
   }
 }
+@mixin s-mobile {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
 @mixin tablet {
   @media (max-width: 800px) {
     @content;

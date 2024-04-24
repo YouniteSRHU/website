@@ -11,17 +11,16 @@ const Navbar = () => {
   return (
     <nav>
 
-      <div className="navbar"><Link to={"/"}> <img src={logo} alt="logo" width={75} className="logo" /></Link>
+      <div className="navbar">
+      <Link to={"/"}> <img src={logo} alt="logo" width={75} className="logo" /></Link>
         <ul className={`nav-links ${showMenu ? "show" : ""}`}>
           <li><Link to={"/YOUTHFEST"}>YOUTHFEST</Link></li>
           <li><Link to={"/NEWS"}>NEWS</Link></li>
           <li><Link to={"/ABOUT-US"}>ABOUT US</Link></li>
           <li><Link to={"/CONTACT-US"}>CONTACT-US</Link></li>
         </ul>
-
-        <Sidebar showMenu={showMenu} />
-
         <Link to={"https://srhu.edu.in"} target="blank" className="srhulogo"> <img src={srhulogo} className="srhulogo" alt="logo" /></Link></div>
+        <Sidebar showMenu={showMenu} />
     </nav >
   );
 };
