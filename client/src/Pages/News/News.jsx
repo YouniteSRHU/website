@@ -32,13 +32,13 @@ const News = () => {
         instalink:"https://www.instagram.com/younite_srhu/",
         images :[
             {
-                "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713803012/Designer_lgupd4.jpg"
+                "image_src":"https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/NewsPage/LatestNews2024-02-24-1.jpeg.jpg"
             },
             {
-                "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713897996/younite_srhut_ntummf.png"
+                "image_src":"https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/NewsPage/LatestNews2024-02-24-2.jpeg.png"
             },
             {
-                "image_src":"https://res.cloudinary.com/dbnzslhl1/image/upload/v1713803016/younite_srhut_1_artaih.png"
+                "image_src":"https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/NewsPage/LatestNews2024-02-24-3.jpeg.png"
             }
         ],
 

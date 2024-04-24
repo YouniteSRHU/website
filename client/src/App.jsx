@@ -25,8 +25,8 @@ function App() {
                   <Route index element={<Youthfest />} />
                   <Route path=":id" element={<SingleEvent />} />
                 </Route>
-                <Route path="/CONTACT-US" element={<Contact />} />
-                <Route path="/ABOUT-US" element={<AboutUs />} />
+                <Route path="/CONTACT US" element={<Contact />} />
+                <Route path="/ABOUT US" element={<AboutUs />} />
                 <Route path="/NEWS" element={<News />} />
               </Route>
             </Routes>

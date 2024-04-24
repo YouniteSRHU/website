@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Links from "./links/Links";
 import "./sidebar.scss";
 import ToggleButton from "./toggleButton/ToggleButton";
+import OutsideClickHandler from "react-outside-click-handler";
 
 const variants = {
   open: {
@@ -27,10 +28,16 @@ const Sidebar = () => {
 
   return (
     <motion.div className="sidebar" animate={open ? "open" : "closed"}>
+    <OutsideClickHandler
+          onOutsideClick={() => {
+            setOpen(false);
+          }}
+        >
       <motion.div className={`bg ${open?"whitebg":"null"}`} variants={variants}>
         <Links setOpen={setOpen}/>
       </motion.div>
       <ToggleButton setOpen={setOpen}/>
+      </OutsideClickHandler>
     </motion.div>
   );
 };
