@@ -16,8 +16,8 @@ const Navbar = () => {
         <ul className={`nav-links ${showMenu ? "show" : ""}`}>
           <li><Link to={"/YOUTHFEST"}>YOUTHFEST</Link></li>
           <li><Link to={"/NEWS"}>NEWS</Link></li>
-          <li><Link to={"/ABOUT-US"}>ABOUT US</Link></li>
-          <li><Link to={"/CONTACT-US"}>CONTACT-US</Link></li>
+          <li><Link to={"/ABOUT US"}>ABOUT US</Link></li>
+          <li><Link to={"/CONTACT US"}>CONTACT US</Link></li>
         </ul>
         <Link to={"https://srhu.edu.in"} target="blank" className="srhulogo"> <img src={srhulogo} className="srhulogo" alt="logo" /></Link></div>
         <Sidebar showMenu={showMenu} />
