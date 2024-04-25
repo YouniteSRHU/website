@@ -7,6 +7,7 @@ export const specificEventController = async (req, res) => {
     },
     include: {
       images: {
+        orderBy: image_id,
         select: {
           image_src: true,
         },
@@ -40,6 +41,7 @@ export const youthFestPageController = async (req, res) => {
           event_desc: true,
           fest_identifier: true,
           images: {
+            orderBy: image_id,
             select: {
               image_src: true,
             }
