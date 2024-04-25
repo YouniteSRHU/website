@@ -21,7 +21,7 @@ const Parallax = ({ type }) => {
     >
       <motion.img 
       initial={{ opacity: 0, y: 200 }}
-      animate={{ opacity: 1, y: 0 }} 
+      animate={{ opacity: 1, y: -100 }} 
       transition={{ duration: 1 }} 
       style={{ y: yText }}
       src="/younite-logo.png"/>
