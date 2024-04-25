@@ -3,7 +3,7 @@ import EventSlider from '../../components/EventSlider/EventSlider'
 import EventHeader from '../../components/EventHeader/EventHeader'
 import { useQuery } from "react-query";
 import { getFest } from '../../utils/api'
-import { Hourglass } from "react-loader-spinner";
+import { Hourglass, Triangle } from "react-loader-spinner";
 import dayjs from 'dayjs';
 import './Youthfest.css'
 import Warning from '../../components/Warning/Warning';
@@ -15,7 +15,7 @@ const Youthfest = () => {
         return (
             <div className="wrapper">
                 <div className="flexCenter paddings">
-                    <Hourglass />
+                    <Triangle />
                 </div>
             </div>
         );
