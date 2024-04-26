@@ -21,11 +21,11 @@ const Parallax = ({ type }) => {
     >
       <motion.img 
       initial={{ opacity: 0, y: 200 }}
-      animate={{ opacity: 1, y: -100 }} 
+      animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 1 }} 
       style={{ y: yText }}
       src="/younite-logo.png"/>
-      <motion.div className="mountains"></motion.div>
+      <motion.div className="student"></motion.div>
       <motion.div style={{ x: yBg , y: sunbg}} className="stars"></motion.div>
     </div>
   );

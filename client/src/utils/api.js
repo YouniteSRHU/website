@@ -2,7 +2,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export const api = axios.create({
-    baseURL: "https://website-theta-eosin-97.vercel.app/api/",
+    // baseURL: "https://website-theta-eosin-97.vercel.app/api/",
+    baseURL: "http://localhost:3000/api",
 });
 
 

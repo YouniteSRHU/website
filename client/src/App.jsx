@@ -21,7 +21,7 @@ function App() {
             <Routes>
               <Route element={<Layout />}>
                 <Route path="/" element={<Website />} />
-                <Route path="/YOUTHFEST">
+                <Route path="/YUVOTSAV'24">
                   <Route index element={<Youthfest />} />
                   <Route path=":id" element={<SingleEvent />} />
                 </Route>
