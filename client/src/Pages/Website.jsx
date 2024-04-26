@@ -1,13 +1,12 @@
 import React from 'react'
-import Hero from '../components/Hero/Hero'
-import EventsCard from '../components/EventsCard/EventsCard'
-import EventSlider from '../components/EventSlider/EventSlider'
 import Parallax from "../components/parallax/Parallax"
+import Portfolio from '../components/portfolio/Portfolio'
 
 const Website = () => {
     return (
         <div className="App">
-        <Parallax type="portfolio" />
+        <Parallax  />
+        <Portfolio/>
         </div>
     )
 }

@@ -26,7 +26,7 @@ const itemVariants = {
 };
 
 const Links = ({setOpen}) => {
-  const items = ["YOUTHFEST","NEWS", "ABOUT US", "CONTACT US"];
+  const items = ["YUVOTSAV'24","NEWS", "ABOUT US", "CONTACT US"];
   const navigate = useNavigate()
   return (
     <motion.div className="links" variants={variants}>

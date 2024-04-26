@@ -8,9 +8,12 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
-    .mountains {
-        background-image: url("/mountain.png");
+    img{
+        position: relative;
+        bottom: 100px;
+    }
+    .student {
+        background-image: url("/mountaincrowd.png");
         background-size: cover;
         background-position: bottom;
         width: 100%;
@@ -24,19 +27,6 @@
         }
     }
 
-    .planets {
-        background-size: cover;
-        background-position: bottom;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 2;
-
-        @include mobile {
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-    }
 
     .stars {
         background-image: url("/sun.png");
@@ -48,5 +38,31 @@
         position: absolute;
         z-index: -1;
         top: 400px;
+        @include desktop{
+            top:300px
+        }
+        @include tablet{
+            top:280px
+        }
+        @include mobile {
+            top:170px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        @include s-mobile {
+            top:130px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    @include mobile{
+        height: 50vh;
+        img{
+            width: 60%;
+            bottom: 10px;
+        }
+    }
+    @include s-mobile{
+        height: 40vh;
     }
 }
