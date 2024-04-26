@@ -7,28 +7,28 @@ const items = [
   {
     id: 1,
     title: "Yuvotsav'24",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/1/YUVOTSAV_BANNER_MOBILE.png",
     desc: "Yuvotsav is a culmination of different spheres of college life to provide a blend of fun cultural, academic activities for the youth. The fest boasts many events with exciting prizes and all day fete for the whole fest.",
     link:"/YOUTHFEST"
   },
   {
     id: 2,
     title: "News",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/NewsPage/LatestNews2024-02-24-1.jpeg.jpg",
     desc: "The News is your go-to place for all the latest updates related to the exciting events and festivals organized by Younite. Stay informed about upcoming happenings, highlights, and behind-the-scenes stories!",
     link:"/NEWS"
   },
   {
     id: 3,
     title: "About Us",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "/about.jpg",
     desc: "Younite is a dynamic student-led ecosystem at SRHU (Swami Rama Himalayan University) that bridges the gap between various colleges within the university. Through a vibrant array of events, workshops, and cultural activities, Younite fosters collaboration, creativity, and a sense of community.",
     link:"/ABOUT US"
   },
   {
     id: 4,
     title: "Contact us",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    img: "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/1/contactus.png",
     desc: "Have a question, comment, or just want to say hello? We’re all ears! The Younite team is dedicated to providing you with the support you need. Whether you’re curious about our events, seeking collaboration, or need assistance, we’re here to help.",
     link:"/CONTACT US"
   },

@@ -14,7 +14,7 @@
     color: #013D7F;
     font-size: 3rem;
     font-weight: 900;
-
+    background: #ffffff6f;
     @include mobile {
       font-size: 24px;
     }
@@ -22,6 +22,7 @@
     .progressBar {
       height: 10px;
       background-color: #013D7F;
+      border: 1px solid white;
     }
   }
 
@@ -78,7 +79,7 @@
         justify-content: center;
         align-items: center;
         @include desktop{
-          padding-bottom: 80px;
+          padding-bottom: 130px;
         }
         @include tablet{
           gap: 20px;
