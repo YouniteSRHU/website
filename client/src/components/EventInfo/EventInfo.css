@@ -3,8 +3,8 @@
 .event-info {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
     padding: 1rem 4rem;
+    gap :5px;
   }
   .event-details{
     color: #013D7F;
@@ -16,12 +16,8 @@
     gap: 10px;
     padding:  2px;
   }
-  .second-section{
-    display: flex;
-    justify-content: space-between;
-  }
   .text-section {
-    max-width: 50%;
+    max-width: 100%;
     text-align: left;
 
   }
@@ -41,23 +37,22 @@
     font-size: 2rem;
   }
   .map-image {
-    max-width: 50%;
+    max-width: 100%;
     border-radius: 10px;
   }
+  .second-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   @media screen and (max-width:800px){
-    .second-section{
+    .event-info{
       flex-direction: column;
-    }
-    .text-section,
-    .map-image {
-      max-width: 100%;
-      margin-bottom: 20px;
     }
   }
   
   @media screen and (max-width: 500px) {
     .event-info {
-      flex-direction: column;
       align-items: start;
       padding: 1rem;
     }
