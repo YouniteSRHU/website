@@ -19,7 +19,9 @@ html {
     color: inherit;
   }
   
-  
+  .parallax-container{
+    aspect-ratio: 1920/775;
+  }
   @mixin s-mobile {
     @media (max-width: 350px) {
       @content;

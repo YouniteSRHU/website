@@ -5,7 +5,9 @@ import Portfolio from '../components/portfolio/Portfolio'
 const Website = () => {
     return (
         <div className="App">
+        <section className='parallax-container'>
         <Parallax  />
+        </section>
         <Portfolio/>
         </div>
     )

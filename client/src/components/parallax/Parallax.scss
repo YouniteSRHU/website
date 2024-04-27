@@ -2,18 +2,20 @@
 
 .parallax {
     width: 100%;
-    height: 90vh;
+    height: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    img{
+    img {
+        width: 40%;
         position: relative;
-        bottom: 100px;
+        bottom: 20%;
     }
+
     .student {
-        background-image: url("/mountaincrowd.png");
+        background-image: url("/mountaincrowd.webp");
         background-size: cover;
         background-position: bottom;
         width: 100%;
@@ -21,57 +23,35 @@
         position: absolute;
         z-index: 3;
 
-        @include desktop {
+        @media screen and (min-width: 1024px) {
             background-size: contain;
             background-repeat: no-repeat;
         }
-        @include tablet {
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        @include mobile {
+
+        @media screen and (max-width: 1023px) {
             background-size: contain;
             background-repeat: no-repeat;
         }
     }
-
 
     .stars {
         background-image: url("/sun.png");
         opacity: 0.7;
         background-size: cover;
         width: 100%;
-        height: 100%;
+        height: 110%;
         position: absolute;
         z-index: -1;
-        top: 10rem;
-        @include desktop{
-            top:10rem
-        }
-        @include tablet{
-            top:15rem;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        @include mobile {
-            top:10rem;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        @include s-mobile {
-            top:8rem;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+        top: 15%;
     }
-    @include mobile{
-        height: 50vh;
-        img{
-            width: 60%;
-            bottom: 10px;
-        }
-    }
-    @include s-mobile{
-        height: 40vh;
+    .doodles {
+        background-image: url("/paralaxbg.png");
+        opacity: 0.1;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -2;
+        top: 0%;
     }
 }
