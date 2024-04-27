@@ -13,6 +13,7 @@ const Parallax = ({ type }) => {
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
   const sunbg = useTransform(scrollYProgress, [0, 1], ["0%", "-400%"]);
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const xBg = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
     <div
@@ -27,6 +28,7 @@ const Parallax = ({ type }) => {
       src="/younite-logo.png"/>
       <motion.div className="student"></motion.div>
       <motion.div style={{ x: yBg , y: sunbg}} className="stars"></motion.div>
+      <motion.div style={{ x: xBg }} className="doodles"></motion.div>
     </div>
   );
 };
