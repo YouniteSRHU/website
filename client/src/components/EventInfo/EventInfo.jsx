@@ -4,31 +4,30 @@ import PropTypes from 'prop-types';
 import './EventInfo.css';
 import { FaCalendarAlt, FaMapMarkerAlt, FaPhone, FaFilePdf } from 'react-icons/fa'
 import { motion } from 'framer-motion';
-const EventInfo = ({ date, venue, guidelines, terms, mapImage,phone, brochureLink }) => {
+const EventInfo = ({ date, venue, guidelines, terms, mapImage, phone, brochureLink }) => {
     return (
         <div className="event-info">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="event-details"
-            >
-                <p className='details'>
-                    <span style={{display:"flex", justifyContent:'center', alignItems:'center'}}><FaCalendarAlt /></span> <span> {date}</span>
-                </p>
-                <p className='details'>
-                    <span style={{display:"flex", justifyContent:'center', alignItems:'center'}}><FaMapMarkerAlt /></span> <span>{venue}</span>
-                </p>
-                <p className='details'>
-                    <span style={{display:"flex", justifyContent:'center', alignItems:'center'}}><FaPhone /></span> <span> {phone}</span>
-                </p>
-                <a href={brochureLink} target="blank" rel="noopener noreferrer" className='details'>
-                    <span style={{display:"flex", justifyContent:'center', alignItems:'center'}}><FaFilePdf /></span> <span>View Brochure</span>
-                </a>
-            </motion.div>
-            <div className="second-section">
             <div className="text-section">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="event-details"
+                >
+                    <p className='details'>
+                        <span style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}><FaCalendarAlt /></span> <span> {date}</span>
+                    </p>
+                    <p className='details'>
+                        <span style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}><FaMapMarkerAlt /></span> <span>{venue}</span>
+                    </p>
+                    <p className='details'>
+                        <span style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}><FaPhone /></span> <span> {phone}</span>
+                    </p>
+                    <a href={brochureLink} target="blank" rel="noopener noreferrer" className='details'>
+                        <span style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}><FaFilePdf /></span> <span>View Brochure</span>
+                    </a>
+                </motion.div>
                 <div className="guidelines">
                     <h2>GUIDELINES</h2>
                     <ul>
@@ -45,7 +44,9 @@ const EventInfo = ({ date, venue, guidelines, terms, mapImage,phone, brochureLin
                         ))}
                     </ul>
                 </div>
-                </div>
+
+            </div>
+            <div className="second-section">
                 <img src={mapImage} alt="Map" className="map-image" />
             </div>
         </div>
