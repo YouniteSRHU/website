@@ -14,7 +14,7 @@ const items = [
   {
     id: 2,
     title: "News",
-    img: "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/NewsPage/LatestNews2024-02-24-1.jpeg.jpg",
+    img: "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/1/LatestNews2024-02-24-1.jpeg.jpg",
     desc: "The News is your go-to place for all the latest updates related to the exciting events and festivals organized by Younite. Stay informed about upcoming happenings, highlights, and behind-the-scenes stories!",
     link:"/NEWS"
   },
@@ -41,7 +41,7 @@ const Single = ({ item }) => {
     target: ref,
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-100%", "100%"]);
 
   return (
     <section >
