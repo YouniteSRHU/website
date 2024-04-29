@@ -30,12 +30,22 @@ const Youthfest = () => {
             </div>
         );
     }
-    const images = data.events[0].images
+    const images = [
+        {
+            "image_src": "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/1/YUVOTSAV_BANNER_MOBILE.png"
+        },
+        {
+            "image_src": "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/1/YUVOTSAV_BANNER_MOBILE.png"
+        },
+        {
+            "image_src": "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/1/YUVOTSAV_BANNER_MOBILE.png"
+        }
+    ]
     const flagshipData = data?.events.filter(event => event.fest_identifier === 'F')
     const nonFlagshipData = data?.events.filter(event => event.fest_identifier === 'B')
     return (
         <div className='youth-container'>
-            <Warning message={["Every participant must fill the", <a src={`${data?.fest_registration_link}`} target='blank'> <strong>Yuvotsav'24 Basic Registration Form</strong> (click here)</a>]}/>
+            <Warning message={["Every participant must fill the", <a src={`${data?.fest_registration_link}`} target='blank'> <strong>Yuvotsav'24 Basic Registration Form</strong> (click here)</a>]} />
             <EventHeader eh_imageURl={images} eh_heading={data?.fest_name} eh_desc={data?.fest_desc} display_prop={"none"} />
             <p className="festDate"><span>DATE</span><span>:</span><span>{dayjs(data?.fest_date).format('DD-MM-YYYY')}</span></p>
             <EventSlider eventType={"Flagship Events"} data={flagshipData} />
