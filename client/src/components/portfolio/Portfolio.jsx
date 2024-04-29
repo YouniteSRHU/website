@@ -9,7 +9,7 @@ const items = [
     title: "Yuvotsav'24",
     img: "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/1/YUVOTSAV_BANNER_MOBILE.png",
     desc: "Yuvotsav is a culmination of different spheres of college life to provide a blend of fun cultural, academic activities for the youth. The fest boasts many events with exciting prizes and all day fete for the whole fest.",
-    link:"/YOUTHFEST"
+    link:"/YUVOTSAV'24"
   },
   {
     id: 2,

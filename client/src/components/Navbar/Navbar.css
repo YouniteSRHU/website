@@ -58,10 +58,12 @@
   }
   .logo{
     width: 10rem;
+    height: 45px;
   }
   
 .srhulogo{
   width: 12rem;
+  height: 45px;
 }
 }
 @media screen and (max-width: 860px) {
@@ -116,15 +118,22 @@
   height: 40px;
 }
 }
-@media screen and (max-width:350px){
+@media screen and (max-width:500px){
   .navbar{
-    padding: 0.8rem;
+    padding: 1rem;
   }
   .logo{
     width: 6rem;
+    height: 30px;
   }
   
 .srhulogo{
   width: 8rem;
+  height: 30px;
 }
+}
+@media screen and (max-width:350px){
+  .navbar{
+    padding: 0.8rem;
+  }
 }
