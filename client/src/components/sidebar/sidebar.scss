@@ -65,6 +65,7 @@
     display: none;
     @include tablet{
       display: block;
+      top: 60px;
     }
     @include mobile{
       display: block;
