@@ -27,6 +27,9 @@ const EventInfo = ({ date, venue, guidelines, terms, mapImage, phone, brochureLi
                     <a href={brochureLink} target="blank" rel="noopener noreferrer" className='details'>
                         <span style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}><FaFilePdf /></span> <span>View Brochure</span>
                     </a>
+                    <a href="https://bit.ly/4bk0UiN" target="blank" rel="noopener noreferrer" className='details'>
+                        <span style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}><FaFilePdf /></span> <span>View Yuvotsav'24 Guidebook</span>
+                    </a>
                 </motion.div>
                 <div className="guidelines">
                     <h2>GUIDELINES</h2>
