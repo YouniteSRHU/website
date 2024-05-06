@@ -37,7 +37,8 @@ const SingleEvent = () => {
     }
     return (
         <>
-            <Warning message={[`This event has same timing as ${data?.colliding_events}  `,<br/>,"Every participant must fill the", <a src={`${festdata?.fest_registration_link}`} target='blank'> <strong>Yuvotsav'24 Basic Registration Form</strong> (click here)</a>]} />
+            <Warning message={[`This event has same timing as ${data?.colliding_events}  `]} />
+            // ,<br/>,"Every participant must fill the", <a src={`${festdata?.fest_registration_link}`} target='blank'> <strong>Yuvotsav'24 Basic Registration Form</strong> (click here)</a>
             <EventHeader eh_imageURl={data.images} eh_heading={data?.event_name} eh_desc={data?.event_desc} regLink={data?.registration_link} buttonText="Register Now!"/>
             <EventInfo
                 date={data?.event_datetime}
