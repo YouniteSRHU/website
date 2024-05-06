@@ -9,7 +9,7 @@ const EventsCard = ({ card }) => {
         <div className="item active" style={{ backgroundImage: `url(${card.images[0].image_src}) ` } } onClick={()=>navigate(`/YUVOTSAV'24/${card.event_id}`)}>
             <div className="item-desc">
                 <h3>{card.event_name}</h3>
-                <p>{truncate(card.event_desc,{length: 50})}Click to view more...</p>
+                <p>{truncate(card.event_desc,{length: 50})}CLICK TO VIEW MORE...</p>
             </div>
         </div>
     )
