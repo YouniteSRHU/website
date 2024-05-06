@@ -46,7 +46,7 @@ const Youthfest = () => {
     return (
         <div className='youth-container'>
             <EventHeader eh_imageURl={images} eh_heading={data?.fest_name} eh_desc={data?.fest_desc} display_prop={"none"} />
-            <p className="festDate"><span>DATE</span><span>:</span><span>{dayjs(data?.fest_date).format('DD-MM-YYYY')}</span></p>
+            <p className="festDate"><span>DATE</span><span>:</span><span>{dayjs(data?.fest_date).format('DD-MM-YYYY')} TO 17-05-2024</span></p>
             <EventSlider eventType={"Flagship Events"} data={flagshipData} />
             <EventSlider eventType={"non Flagship Events"} data={nonFlagshipData} />
         </div>
