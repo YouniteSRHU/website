@@ -2,6 +2,7 @@ import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 // import emailjs from '@emailjs/browser'
 import { EarthCanvas } from './Canvas'
+import { FaPhone } from 'react-icons/fa'
 import './ContactUs.css'
 // import { SectionWrapper } from '../hoc'
 
@@ -58,10 +59,15 @@ const ContactUs = () => {
             >
                 <p className="sm:text-[18px] text-[14px] uppercase tracking-wider">Get in touch</p>
                 <h3 className="text-[#013D7F] font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact</h3>
+                <p className='mt-12 text-[#013D7F] font-bold text-xl flex justify-center gap-2'>
+                        <span style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}><FaPhone /></span> 
+                        <span>8755533876  </span><span>,</span><span>7310696262</span>
+                    </p>
+                    <p className=" mt-6 sm:text-[18px] text-[14px] uppercase tracking-wider">OR</p>
                 <form
                     ref={formRef}
                     onSubmit={handleSubmit}
-                    className="mt-12 flex flex-col gap-8"
+                    className="mt- flex flex-col gap-8"
                 >
                     <label className='flex flex-col'>
                         <span className='text-[#013D7F] font-medium mb-4'>Your Name</span>
