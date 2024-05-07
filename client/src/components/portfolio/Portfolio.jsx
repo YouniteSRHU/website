@@ -2,12 +2,13 @@ import { useRef } from "react";
 import "./Portfolio.scss";
 import {Link} from 'react-router-dom'
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const items = [
   {
     id: 1,
     title: "Yuvotsav'24",
-    img: "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/1/YUVOTSAV_BANNER_MOBILE.png",
+    img: "https://hjkolaoavfpnlclfiems.supabase.co/storage/v1/object/public/website/fest/1/overlay.webp",
     desc: "Yuvotsav is a culmination of different spheres of college life to provide a blend of fun cultural, academic activities for the youth. The fest boasts many events with exciting prizes and all day fete for the whole fest.",
     link:"/YUVOTSAV'24"
   },
@@ -34,7 +35,7 @@ const items = [
   },
 ];
 
-const Single = ({ item }) => {
+const Single = ({ item , plink}) => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -42,10 +43,10 @@ const Single = ({ item }) => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["-100%", "100%"]);
-
+  const navigate = useNavigate();
   return (
     <section >
-      <div className="P-container">
+      <div className="P-container" onClick={()=>navigate(`${plink}`)}>
         <div className="P-wrapper">
           <div className="imageContainer" ref={ref}>
             <img src={item.img} alt="" />
@@ -81,7 +82,7 @@ const Portfolio = () => {
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (
-        <Single item={item} key={item.id} />
+        <Single item={item} key={item.id} plink={item.link}/>
       ))}
     </div>
   );
