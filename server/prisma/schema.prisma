@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -17,70 +11,70 @@ model Fest {
   fest_id                Int              @id @default(autoincrement())
   fest_name              String
   fest_desc              String
-  fest_registration_link String?
-  images                 Image[]
   fest_date              DateTime         @default(now())
+  fest_registration_link String?
   events                 Event[]
   guidelines             EventGuideline[]
   tcs                    EventTC[]
+  images                 Image[]
 }
 
 model Event {
   event_id          Int              @id @default(autoincrement())
-  fest              Fest?            @relation(fields: [festId], references: [fest_id])
   festId            Int?
-  participants      Participant[]
   event_name        String
   event_desc        String?
-  images            Image[]
-  guidelines        EventGuideline[]
-  tc                EventTC[]
   registration_link String?
-  brochure_link     String?
   colliding_events  String?
   event_datetime    String?
   event_venue       String?
   event_map         String?
-  contact_details   String?
   fest_identifier   String?          @db.Char(1)
+  brochure_link     String?
+  contact_details   String?
+  fest              Fest?            @relation(fields: [festId], references: [fest_id])
+  guidelines        EventGuideline[]
+  tc                EventTC[]
+  images            Image[]
+  participants      Participant[]    @relation("EventToParticipant")
 }
 
 model Image {
   image_id  Int     @id @default(autoincrement())
   image_src String
+  eventId   Int?
+  festId    Int?
   gallery   Boolean @default(true)
   event     Event?  @relation(fields: [eventId], references: [event_id])
-  eventId   Int?
   fest      Fest?   @relation(fields: [festId], references: [fest_id])
-  festId    Int?
 }
 
 model EventGuideline {
   guideline_id Int    @id @default(autoincrement())
   guideline    String
-  event        Event? @relation(fields: [eventId], references: [event_id])
   eventId      Int?
-  fest         Fest?  @relation(fields: [festId], references: [fest_id])
   festId       Int?
+  event        Event? @relation(fields: [eventId], references: [event_id])
+  fest         Fest?  @relation(fields: [festId], references: [fest_id])
 }
 
 model EventTC {
   tc_id   Int    @id @default(autoincrement())
-  tc      String
-  event   Event? @relation(fields: [eventId], references: [event_id])
   eventId Int?
-  fest    Fest?  @relation(fields: [festId], references: [fest_id])
+  tc      String
   festId  Int?
+  event   Event? @relation(fields: [eventId], references: [event_id])
+  fest    Fest?  @relation(fields: [festId], references: [fest_id])
 }
 
 model Participant {
   participant_id    Int     @id @default(autoincrement())
   participant_name  String
   organisation_name String?
-  events            Event[]
   mobile            String
   email             String
   position          Int     @db.SmallInt
+  events            Event[] @relation("EventToParticipant")
 }
 
 model News {

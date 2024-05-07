@@ -6,7 +6,6 @@ import HeroOverlay from '../components/HeroOverlay/HeroOverlay'
 const Website = () => {
     return (
         <div className="App">
-        <HeroOverlay/>
         <section className='parallax-container'>
         <Parallax  />
         </section>

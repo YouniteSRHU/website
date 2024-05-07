@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import "./Parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
+import HeroOverlay from "../HeroOverlay/HeroOverlay";
 
 const Parallax = ({ type }) => {
   const ref = useRef();
@@ -19,13 +20,13 @@ const Parallax = ({ type }) => {
     <div
       className="parallax"
       ref={ref}
-    >
+    ><HeroOverlay/>
       <motion.img 
       initial={{ opacity: 0, y: 200 }}
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 1 }} 
       style={{ y: yText }}
-      src="/younite-logo.png"/>
+      src="/tagline.webp"/>
       <motion.div className="student"></motion.div>
       <motion.div style={{ x: yBg , y: sunbg}} className="stars"></motion.div>
       <motion.div style={{ x: xBg }} className="doodles"></motion.div>

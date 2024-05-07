@@ -30,16 +30,16 @@ app.use(cors());
 async function createEvent() {
   const eventDatas = [
     {
-      eventName: "Chitrakala",
-      eventDesc: "Chitrakala: Where Young Minds Paint Dreams - From vibrant colors to imaginative strokes, let your artwork speak volumes.Join us in celebrating the spirit of artistic expression and ignite the world with your unique vision.",
+      eventName: "Envisage",
+      eventDesc: "Engage in stimulating debates, develop critical thinking skills, and broaden your understanding of global issues. Open to students from all backgrounds, this event promises to be a platform for meaningful dialogue and collaboration. Don't miss out on this opportunity to make your voice heard and shape the future!",
       registrationLink: "https://instagram.com/",
       brochureLink: "to bheri",
       collidingEvents: "Hackathon, Brainwave, Fish Tank",
-      eventDate: "Tuesday, 14 May 2024",
-      eventVenue: "Bioscience Building",
+      eventDate: "April 13th -15th, 2024",
+      eventVenue: "B C Roy Auditorium, HIMS",
       eventMap: "http://google.com",
-      eventContact: "Yashwani Yadav - 6397446249, Another contact - 8126243347 ",
-      festIdentifier: 'B',
+      eventContact: "+917302307099-Aditya, +917617645979 -  Anmol",
+      festIdentifier: 'F',
 
       images: [
         {
@@ -55,33 +55,39 @@ async function createEvent() {
       ],
       guidelines: [
         {
-          guideline: "Participation cab be solo and duo."
+          guideline: "Registrations will be done through a form which will be provided shortly."
         },
         {
-          guideline: "Open to all student with a valid School ID."
+          guideline: "Information about the event will be shared to the registered participants via a WhatsApp group "
         },
         {
-          guideline: "Participants must bring their own art supplies,including pencils, paints and brushes."
+          guideline: "The MUN will begin after the inaugural on Day 1 and continue till 6 in the evening. The participants are requested to manage their travel arrangements accordingly."
         },
         {
-          guideline: "A4 sheets will be available for all participation."
+          guideline: "The MUN debates will be conducted on Day 1 & 2, day 3 will be observed for free speech and prize distribution."
         },
         {
-          guideline: "Winner will be selected based on judges."
+          guideline: "Each participant is requested to choose and prepare as a delegate of a country from the designated list available during registration."
         },
       ],
       tcs: [
         {
-          tc: "Content must be respectfull and free from offensive material."
+          tc: "Registration fees is ₹250 per delegate. This registration fee is only for one event which is of three days. The registration fee is non-refundable."
         },
         {
-          tc: "Maintain a positive and supportive atmosphere."
+          tc: "Every delegate must carry ID cards of their respective college / school for identification."
         },
         {
-          tc: "Submission must be received by the specificed deadline; late entries will not be considred."
+          tc: "The delegate country will not be changed later in any circumstances."
         },
         {
-          tc: "Judging will be based on creativity, originality, techniques and adherence to any specified theme."
+          tc: "Each delegate has to submit a position paper"
+        },
+        {
+          tc: "Dress code: Western Formals"
+        },
+        {
+          tc: "Language of Discussion: English"
         },
       ]
     },

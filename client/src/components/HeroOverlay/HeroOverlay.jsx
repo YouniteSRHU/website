@@ -27,14 +27,15 @@ const HeroOverlay = () => {
             transition={{ duration: 3 }}
             
         >
-        <button className="close-button" onClick={closeOverlay}>
+        {/* <button className="close-button" onClick={closeOverlay}>
                     ✖
-                </button>
+                </button> */}
             <div className="overlay-content"
             onClick={()=> navigate("/YUVOTSAV'24")} 
             >
                 
-                <div className="countdown">Registration deadline {daysToGo} days left! </div>
+            {/* <div className="countdown">Registration deadline {daysToGo} days left! </div> */}
+                
             </div>
         </motion.div>
     );

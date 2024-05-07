@@ -2,17 +2,20 @@
 
 /* The overlay container */
 .overlay {
-  position: fixed;
-  top: 10%;
-  left: 25%;
-  width: 50%;
-  height: 61%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  aspect-ratio: 210/310;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
   z-index: 9999;
   cursor: pointer;
   background-color: #fff;
   border: 2px solid #013D7F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay.visible {
@@ -35,7 +38,7 @@
     align-items: flex-end;
     width: 100%;
     height: 100%;
-  background-image: url("/overlay.webp");
+  background-image: url("/overlay_mobile.webp");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -43,33 +46,18 @@
 
 .countdown {
   bottom: 0;
-  font-size: 1.5rem;
+  font-size: 0.7rem;
   font-weight: 900;
   color: rgb(161, 7, 7);
 }
 
 @media screen and (max-width: 768px) {
-    .overlay{
-        width: 60%;
-        height: 50%;
-        left: 20%;
-    }
     .countdown{
         font-size: 1rem;
     }
 }
 @media screen and (max-width: 500px) {
-    .overlay{
-        width: 70%;
-        left: 15%;
-        height: 60%;
-    }
-    .overlay-content{
-        
-        background-image: url("/overlay_mobile.webp");
-        background-size: 80%;
-    }
-    .countdown{
-        font-size: 0.8rem;
+    .overlay.overlay{
+      display: none;
     }
 }
