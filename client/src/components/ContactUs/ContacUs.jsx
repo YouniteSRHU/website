@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
-// import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser'
 import { EarthCanvas } from './Canvas'
 import { FaPhone } from 'react-icons/fa'
 import './ContactUs.css'
@@ -25,27 +25,29 @@ const ContactUs = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
-            emailjs.send('service_7p8m98n', 'template_b53oh9r',
-              {
+        emailjs.send('service_7p8m98n', 'template_b53oh9r',
+            {
                 from_name: form.name,
-                to_name: "Subham",
+                to_name: "Younite Team",
                 from_email: form.email,
                 to_email: "younite@srhu.edu.in",
                 message: form.message
-              }
-              ).then(() => {
-                setLoading(false);
-                alert("Thank you. I will get back to you as soon as possible");
-                setForm({
-                  name: '',
-                  email: '',
-                  message: '',
-                })
-              }, (error)=>{
-                setLoading(false);
-                console.log(error);
-                alert('Something went wrong')
-              })
+            },{
+                publicKey: 'aDrPqyiBouA33coU1',
+            }
+        ).then(() => {
+            setLoading(false);
+            alert("Thank you. I will get back to you as soon as possible");
+            setForm({
+                name: '',
+                email: '',
+                message: '',
+            })
+        }, (error) => {
+            setLoading(false);
+            console.log(error);
+            alert('Something went wrong')
+        })
     }
 
     return (
@@ -60,10 +62,10 @@ const ContactUs = () => {
                 <p className="sm:text-[18px] text-[14px] uppercase tracking-wider">Get in touch</p>
                 <h3 className="text-[#013D7F] font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact</h3>
                 <p className='mt-12 text-[#013D7F] font-bold text-xl flex justify-center gap-2'>
-                        <span style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}><FaPhone /></span> 
-                        <span>8755533876  </span><span>,</span><span>7310696262</span>
-                    </p>
-                    <p className=" mt-6 sm:text-[18px] text-[14px] uppercase tracking-wider">OR</p>
+                    <span style={{ display: "flex", justifyContent: 'center', alignItems: 'center' }}><FaPhone /></span>
+                    <span>8755533876  </span><span>,</span><span>7310696262</span>
+                </p>
+                <p className=" mt-6 sm:text-[18px] text-[14px] uppercase tracking-wider">OR</p>
                 <form
                     ref={formRef}
                     onSubmit={handleSubmit}
