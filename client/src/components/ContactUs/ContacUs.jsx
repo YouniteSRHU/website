@@ -25,27 +25,27 @@ const ContactUs = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
-        //     emailjs.send('service_j31j3jl', 'template_cdu56mq',
-        //       {
-        //         from_name: form.name,
-        //         to_name: "Subham",
-        //         from_email: form.email,
-        //         to_email: "subhnegipython@gmail.com",
-        //         message: form.message
-        //       },
-        //       "cwKmOLy55ueDKpiMc").then(() => {
-        //         setLoading(false);
-        //         alert("Thank you. I will get back to you as soon as possible");
-        //         setForm({
-        //           name: '',
-        //           email: '',
-        //           message: '',
-        //         })
-        //       }, (error)=>{
-        //         setLoading(false);
-        //         console.log(error);
-        //         alert('Something went wrong')
-        //       })
+            emailjs.send('service_7p8m98n', 'template_b53oh9r',
+              {
+                from_name: form.name,
+                to_name: "Subham",
+                from_email: form.email,
+                to_email: "younite@srhu.edu.in",
+                message: form.message
+              }
+              ).then(() => {
+                setLoading(false);
+                alert("Thank you. I will get back to you as soon as possible");
+                setForm({
+                  name: '',
+                  email: '',
+                  message: '',
+                })
+              }, (error)=>{
+                setLoading(false);
+                console.log(error);
+                alert('Something went wrong')
+              })
     }
 
     return (
