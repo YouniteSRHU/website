@@ -32,6 +32,7 @@ const EventHeader = ({eh_imageURl,eh_heading,eh_desc,display_prop, regLink, bgCo
         onClick={()=>{ 
           window.open(`${regLink}`,'_blank')
           }}
+        disabled
       >
         {buttonText}
       </motion.button>
