@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "./Parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
-import HeroOverlay from "../HeroOverlay/HeroOverlay";
+// import HeroOverlay from "../HeroOverlay/HeroOverlay";
 
 const Parallax = ({ type }) => {
   const ref = useRef();
@@ -20,7 +20,8 @@ const Parallax = ({ type }) => {
     <div
       className="parallax"
       ref={ref}
-    ><HeroOverlay/>
+    >
+{/*       <HeroOverlay/> */}
       <motion.img 
       initial={{ opacity: 0, y: 200 }}
       animate={{ opacity: 1, y: 0 }} 
